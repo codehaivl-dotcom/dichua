@@ -1,27 +1,24 @@
-# ĐI CHÙA ONLINE — SOCIAL 3D GAME / SPEC V2
+# Đi Chùa Online — FULL SPEC V3 (2026-11-01)
 
-**Định hướng duyệt ngày 01/11/2026.** Chưa có code game trong repo.
+**Status: specification committed; game code not implemented yet.**
 
-Game 3D multiplayer kết hợp xu hướng đi chùa online và gameplay social của **Phố Có Hẹn**: tạo avatar, thăm chùa, xin quẻ tình duyên, dâng sao giải hạn, cắt duyên âm theo cốt truyện dân gian, kết bạn thật, chat gần, nhắn tin, rủ nhau làm hoạt động đôi, ngồi quán trà, chụp ảnh.
+A 3D third-person Vietnamese multiplayer **social game** combining the online-temple trend with **Phố Có Hẹn** social interaction: meeting players, proximity chat, friends, DMs, co-op experiences, tea, photos, fortune-telling and folklore activities. **Not Làng Xíu Xiu; no mandatory low-poly.** Use textured, natural-scale 3D style based on the user's 01/11/2026 third-person screenshot (quality/camera reference only, not Western street setting).
 
-**ĐÂY KHÔNG PHẢI LÀNG XÍU XIU.** Không phải game nông trại/children diorama. **Không bắt buộc low-poly**. Chất lượng 3D third-person, texture và nhân vật theo ảnh gameplay người dùng gửi 01/11/2026; ảnh tham chiếu về góc máy và độ chi tiết, KHÔNG phải bối cảnh phố Tây. Bối cảnh chùa và khu phố văn hóa Việt Nam.
+## All approved features
+- Original social/folklore: love oracle solo/pair, dâng sao giải hạn, fictional cắt duyên âm, avatar, chat, friend list, joint activities, photo, NPCs, tea.
+- **10 full temple-practice systems:** mala 18/54/108, lạy 1/9/27/108, real scripture library, wooden-fish rhythm, meditation/timed breathing, lotus lanterns with public/private wishes, incense/flowers/lamps/fruit, xăm, cầu an, pilgrimage journal.
+- **Five authentic Buddhist scripture catalog references**, listening links from real official sources; **two legally cleared playable Vietnamese in-game audio tracks required for full completion**, not yet produced.
+- **Three real playable maps:** Chùa Sen (main), Chùa Trúc, Chùa Mây; group chanting/mala/bows/lantern events, travels, opt-in experience points/levels 1–6 and opt-in friends-only board (game-only, not religious merit).
 
-**Ba trụ:** (1) đi chùa & khám phá, (2) mini-game dân gian tình duyên/giải hạn, (3) tương tác xã hội và quan hệ bạn bè. **Không** làm game tĩnh tâm chỉ đi bộ/ngồi thiền. Không cố biến thành bản sao của Sansa.
+## Read in order
+1. [AGENTS](AGENTS.md) and [locked product scope](docs/00-VISION.md)
+2. [Existing gameplay](docs/01-GAMEPLAY.md), [map/art](docs/02-WORLD-ART.md), [social](docs/03-SOCIAL.md), [UI](docs/04-UI.md), [NPC](docs/05-CONTENT.md)
+3. [Architecture](docs/06-TECH.md), [Safety](docs/07-SAFETY.md), [Original QA](docs/08-QA.md), [Original phases](docs/09-DELIVERY.md)
+4. [All 10 temple practices](docs/10-TEMPLE-ACTIVITIES.md)
+5. [Five REAL Buddhist texts/audio licensing](docs/11-SUTRA-LIBRARY.md)
+6. [Pilgrimage, events, XP and levels](docs/12-PILGRIMAGE-PROGRESSION.md)
+7. [Expanded acceptance](docs/13-V3-QA.md) and [agent build order](docs/14-V3-IMPLEMENTATION.md)
 
-### Đọc theo thứ tự
-1. [Luật agent](AGENTS.md)
-2. [00 — Vision & Scope](docs/00-VISION.md)
-3. [01 — Gameplay, ritual & mini-games](docs/01-GAMEPLAY.md)
-4. [02 — World & Art](docs/02-WORLD-ART.md)
-5. [03 — Social Multiplayer](docs/03-SOCIAL.md)
-6. [04 — UI / HUD / avatar](docs/04-UI.md)
-7. [05 — NPC, nội dung và quẻ](docs/05-CONTENT.md)
-8. [06 — Tech & data](docs/06-TECH.md)
-9. [07 — Safety, privacy, respect](docs/07-SAFETY.md)
-10. [08 — QA & acceptance](docs/08-QA.md)
-11. [09 — Implementation plan & simulation](docs/09-DELIVERY.md)
-12. [Data](data/) — data-driven activities, zones, fortune results.
+Exact config/data: [temple practices](data/temple-practices.v3.json), [sutra catalog](data/sutras.v1.json), [xăm](data/xam.v1.json), [pilgrimages](data/pilgrimage.v1.json), [events](data/events.v1.json), [progression](data/progression.v1.json), plus [social activities](data/activities.v1.json), [world](data/zones.v1.json), [fortune](data/fortune.v1.json).
 
-**Chính điện trang nghiêm và khu hoạt động tín ngưỡng dân gian tách biệt.** Bói duyên, cắt duyên âm, giải hạn là NỘI DUNG GAME hư cấu/biểu tượng; không tuyên bố tác động thật đến số phận, tình cảm hay tâm linh, không bán dịch vụ trừ tà.
-
-**Phạm vi code:** repo độc lập. Có thể lấy ý tưởng gameplay từ Phố Có Hẹn, nhưng không giả vờ đã có runtime dùng chung hay tự sao chép repo/assets nếu chưa được quyền. Để chạy MangoLocal/Spawn Live chung source, cần chứng minh integration/QA riêng.
+**Important audio status:** existing recordings on Chùa Giác Ngộ website are publicly listenable but **do not grant a license to embed/rehost MP3 in the game**. Agent must provide official listening links first; ship in-game playback only after written rights/public-domain evidence and a real recorded or licensed TTS file. Fortune/xăm and folklore rituals are entertainment, distinct from actual Buddhist scripture. All forms of actual worship are free; no spiritual superiority score.
