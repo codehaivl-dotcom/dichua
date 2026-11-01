@@ -1,3 +1,5 @@
+> **OWNER V3 EXPANSION (2026-11-01):** New required features supersede any conflicting older MVP exclusion. See docs/10–14 and AGENTS.md. Sections below are retained as baseline for initial social/folklore phase, not the entire full-game scope.
+
 # 01 — Gameplay / Interactions / Ritual Minigames
 
 ## 10-minute happy-path
@@ -38,3 +40,7 @@ Nearest valid 3D anchor within range with clear line of sight, then priority in 
 
 ### Realistic social pacing
 Rituals 25–90s except cut-ties 60–150s; all animations skip-able and no forced lock longer than clip. No click farming, no repeated reward, no karmic XP, no “vận xui” penalties.
+
+
+### V3 mandatory additions
+The previous gameplay is a **baseline**, not the full scope. Add T01–T10 in docs/10: 18/54/108 mala, 1/9/27/108 lạy, real scripture reading/listening, gõ mõ, meditation, floating wishes, four offerings, xăm, cầu an, journal. Server validates counts and state. Add 3 map pilgrimage, events and optional game-only progression from docs/12. No feature may be removed because prior MVP explicitly excluded it.

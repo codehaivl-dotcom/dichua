@@ -1,3 +1,5 @@
+> **OWNER V3 EXPANSION (2026-11-01):** New required features supersede any conflicting older MVP exclusion. See docs/10–14 and AGENTS.md. Sections below are retained as baseline for initial social/folklore phase, not the entire full-game scope.
+
 # 09 — Agent execution plan, acceptance gates, simulator/tools
 
 ## Phase 0 — Repo/runtime foundation
@@ -31,3 +33,7 @@ Security/moderation, 30 client load, safe content review, GDPR/privacy and asset
 
 ## Agent instruction
 Start coding Phase 0–1; not another architecture brainstorm or documentation expansion. Each sprint report only: IMPLEMENTED, TESTED (commands/evidence), FAILED, UNVERIFIED, NEXT. Bring blockers to owner only when architecture/code license/cultural depiction requires a product decision.
+
+
+### V3 extra phases REQUIRED for full product
+Phase 6: 10 temple practice systems (mala, 108 lạy, sutra interface, gõ mõ, meditation, lantern, offerings, xăm, cầu an, journal). Phase 7: five sourced real Buddhist canon entries, official external listen and **2** rights-cleared internal Vietnamese audio tracks playable with metadata; license pending = BLOCKED and never claimed done. Phase 8: CHUA_TRUC and CHUA_MAY fully traversable multiplayer maps, map transfers, four community events, six game-only cosmetic levels + opt-in friend leaderboard. Follow docs/14-V3-IMPLEMENTATION.md. Agent still starts Phase 0/1 real runnable, then proceeds rather than re-auditing.

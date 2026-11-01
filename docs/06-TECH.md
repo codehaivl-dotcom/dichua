@@ -1,3 +1,5 @@
+> **OWNER V3 EXPANSION (2026-11-01):** New required features supersede any conflicting older MVP exclusion. See docs/10–14 and AGENTS.md. Sections below are retained as baseline for initial social/folklore phase, not the entire full-game scope.
+
 # 06 — Technical architecture, protocol, persistence and failure modes
 
 ## Recommended stack
@@ -32,3 +34,7 @@ Budget targets from doc 02, lazy GLB loading + instancing, render loop independe
 
 ## Deployment
 Static frontend CDN plus Node API/ws behind same-origin HTTPS proxy; staging and production env, server metrics health probes, secure cookies, DB backups, automated DB migrations, ws upgrade configured. Secrets env only; logs redact chat text and identifiers where possible. Do not claim prod-ready without deployment and live two-client test.
+
+
+### V3 runtime/authority
+Room key includes mapId, instanceId; 3 map scene transfer must be transactional with rollback and same identity/friends. Add practice controllers server-validated for mala 18/54/108, bow 1/9/27/108, lanterns cap40, four offering cooldowns, 12 xăm slip server draw, private wishes, event scheduler Asia/Ho_Chi_Minh, XP idempotent receipts and optional friend ranking. Loaded sutra audio assets must be legally cleared and SHA256 indexed; external official recordings are linked, not illegally proxied. Shared schemas for new data/*.json; load 30 clients per room and test map travel/reconnect.

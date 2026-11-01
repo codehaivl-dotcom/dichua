@@ -1,3 +1,5 @@
+> **OWNER V3 EXPANSION (2026-11-01):** New required features supersede any conflicting older MVP exclusion. See docs/10–14 and AGENTS.md. Sections below are retained as baseline for initial social/folklore phase, not the entire full-game scope.
+
 # 02 — World, environment, camera and asset production
 
 ## One continuous 3D place
@@ -35,3 +37,7 @@ Audio: birds, gentle breeze, brick footsteps, indoor quiet bed, bell once, token
 
 ### Runtime screenshots acceptance
 Gate, dense courtyard with real test avatars, hall, love garden (pair), folk stage, tea social, pond, and mobile portrait/landscape. All from playable build, never concept image presented as implementation.
+
+
+### V3 world expansion
+Existing eight zones define **CHUA_SEN main scene only**. Add genuine playable **CHUA_TRUC** and **CHUA_MAY** from data/pilgrimage.v1.json; collision, props, avatar presence and server travel, not static thumbnails. Provide stations for tràng hạt, lạy Phật, gõ mõ, genuine sutra listening, meditating, flower/fruit/light offerings, xăm, lanterns and events in culturally appropriate zones. Same user-supplied 3D fidelity reference; low-poly optional, not mandated.

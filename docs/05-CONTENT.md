@@ -1,3 +1,5 @@
+> **OWNER V3 EXPANSION (2026-11-01):** New required features supersede any conflicting older MVP exclusion. See docs/10–14 and AGENTS.md. Sections below are retained as baseline for initial social/folklore phase, not the entire full-game scope.
+
 # 05 — NPC, stories, authored fortune content
 
 All content written and localized; **no runtime AI predictions or unconstrained dialogue**.
@@ -36,3 +38,7 @@ Allow only sharing text prompts with manual consent; do not auto-post a ritual r
 
 ## Expandable writing pipeline
 Content should be identified by stable ID/version. Future authored seasonal stories require editorial review and cultural review before deployment; no automatic AI generative “quẻ” content.
+
+
+### V3 content separation
+The original love oracle and star/cut-ties content remains entertainment, **not scripture**. Add twelve authored game-simulation xăm slips at data/xam.v1.json with origin disclaimer, five actual canonical scripture source entries at data/sutras.v1.json (text/audio rights separately checked), and prewritten/moderated lotus wishes. TTS may only recite verified licensed scripture verbatim; no AI-written words presented as Buddha's.

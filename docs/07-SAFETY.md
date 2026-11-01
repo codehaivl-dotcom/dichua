@@ -1,3 +1,5 @@
+> **OWNER V3 EXPANSION (2026-11-01):** New required features supersede any conflicting older MVP exclusion. See docs/10–14 and AGENTS.md. Sections below are retained as baseline for initial social/folklore phase, not the entire full-game scope.
+
 # 07 — Safety, privacy, religious/cultural boundaries
 
 ## Respect culture and faith
@@ -26,3 +28,7 @@ Third-party asset without license -> cannot ship.
 
 ## Rights
 Review architecture and ritual symbolism with culturally knowledgeable reviewer before public launch; original or licensed glTF models/music, attribution manifest, no copyrighted social media images. Fictional NPC shouldn't impersonate real monks or temples.
+
+
+### V3 legal/privacy safeguards
+The public online game includes authentic Buddhist references AND fictional folk games; never conflate them. Modern Vietnamese translation rights, sound recording rights and original ancient scripture rights are separate. Do not copy MP3 hosted by Chùa Giác Ngộ without permission. Prayer text private unless user consents and moderation approves; only templates public until moderation is reliable. Long practice pause/quit anytime, no medical claims. XP purely for discovery/cooperation, never for number of bows, chanting minutes or beads. Opt-in anonymous friend ranks only.
