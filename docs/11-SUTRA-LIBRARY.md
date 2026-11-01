@@ -24,3 +24,6 @@ Mỗi tác phẩm có canonicalId, loại truyền thống, source URL, translat
 
 ## Reference
 Truy xuất thông tin/cấp phép đúng tại nguồn; không sao chép hàng loạt kinh điển từ Internet hoặc dùng để train AI.
+
+## Chế độ đọc và tụng theo kinh
+Khi bản chữ Việt đã được quyền dùng: “Đọc kinh” hiển thị nguyên văn, có font lớn, next-line/manual highlight và lưu vị trí riêng tư. Khi có bản audio đã được quyền dùng: thêm “Tụng theo bản thu” với tự động highlight theo timestamp / lời kinh đúng nguồn. Không xin quyền micro, không ghi âm giọng người chơi. Nhóm có thể đồng bộ câu/đoạn bằng server sau khi mỗi người opt-in, nhưng nghe audio riêng tư trên từng client. Không chấm điểm hay xếp hạng tốc độ tụng. Nếu không có văn bản tiếng Việt cấp phép, chỉ hiện nguồn đọc/nghe bên ngoài, không giả là player nội bộ.

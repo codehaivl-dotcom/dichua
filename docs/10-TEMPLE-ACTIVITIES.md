@@ -11,6 +11,9 @@ Near hall cushion choose 1/9/27/108; avatar plays respectful FULL prostration (~
 ## T03 — NGHE KINH PHẬT THẬT / ĐỌC KINH
 Separate genuine Buddhist library from fiction oracle; see docs/11-SUTRA-LIBRARY.md. Card title, canon/source, translator, text/audio rights; Play/Pause/seek/speed/volume and readable transcript/caption for CLEARED_LOCAL audio. Official listening links for recordings lacking redistribution permission. No autoplay/no broadcasting monastery chant to other players. User may privately listen while sitting or exploring. Do NOT invent scripture or label generative advice “kinh”.
 
+### Chế độ “Tụng kinh theo văn bản” (thuộc T03, bắt buộc)
+Người chơi chọn một bài kinh THẬT trong thư viện đã xác minh; trang kinh hiển thị nguyên văn bản dịch được cấp phép, chia đoạn đúng nguồn. Có chế độ Tự đọc: bấm Tiếp dòng để đánh dấu đoạn đang đọc, không yêu cầu micro, không tự động ghi âm. Chế độ Tụng theo bản thu: highlight từng đoạn theo timestamp của audio đã được cấp phép; nếu chưa có quyền phát audio, chế độ này ẩn và chỉ có “Nghe tại nguồn” hoặc “Đọc kinh” khi văn bản đã được cấp phép. Người khác KHÔNG nghe giọng người chơi. Có thể cùng ngồi, đồng bộ vị trí dòng trong nhóm theo opt-in mà không chia sẻ tôn giáo cá nhân hoặc số lần tụng. Không chấm điểm niệm/tụng, không AI sửa lời kinh.
+
 ## T04 — GÕ MÕ
 At dedicated reading/chant corner, tap instrument (Space/click/phone), 1 hit per input, min spacing 200ms, play original/licensed soft wooden hit. Choose free rhythm or 16/32/64 taps with optional tempo guide and silent mode; light ring indicates pulse. Accuracy feedback local/private, not spirituality leaderboard. No sending every beat to server (sparse nearby animation <=1/2s).
 

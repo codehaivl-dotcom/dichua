@@ -6,7 +6,7 @@ A 3D third-person Vietnamese multiplayer **social game** combining the online-te
 
 ## All approved features
 - Original social/folklore: love oracle solo/pair, dâng sao giải hạn, fictional cắt duyên âm, avatar, chat, friend list, joint activities, photo, NPCs, tea.
-- **10 full temple-practice systems:** mala 18/54/108, lạy 1/9/27/108, real scripture library, wooden-fish rhythm, meditation/timed breathing, lotus lanterns with public/private wishes, incense/flowers/lamps/fruit, xăm, cầu an, pilgrimage journal.
+- **10 full temple-practice systems:** mala 18/54/108, lạy 1/9/27/108, real scripture listening/reading/reciting (tụng kinh), wooden-fish rhythm, meditation/timed breathing, lotus lanterns with public/private wishes, incense/flowers/lamps/fruit, xăm, cầu an, pilgrimage journal.
 - **Five authentic Buddhist scripture catalog references**, listening links from real official sources; **two legally cleared playable Vietnamese in-game audio tracks required for full completion**, not yet produced.
 - **Three real playable maps:** Chùa Sen (main), Chùa Trúc, Chùa Mây; group chanting/mala/bows/lantern events, travels, opt-in experience points/levels 1–6 and opt-in friends-only board (game-only, not religious merit).
 

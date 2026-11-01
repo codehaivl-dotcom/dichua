@@ -58,7 +58,19 @@
         1.25
       ],
       "privateByDefault": true,
-      "rewardPerMinute": 0
+      "rewardPerMinute": 0,
+      "recitation": {
+        "required": true,
+        "modes": [
+          "READ_MANUAL_LINES",
+          "FOLLOW_LICENSED_AUDIO"
+        ],
+        "recordMic": false,
+        "score": false,
+        "groupOptIn": true,
+        "requireLicensedVietnameseText": true,
+        "requireClearedAudioForFollow": true
+      }
     },
     {
       "id": "PR_MOKUGYO",
