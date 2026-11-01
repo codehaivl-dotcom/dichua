@@ -1,3 +1,5 @@
+> **WARDROBE OVERRIDE 2026-11-01:** New owner dress-code in [docs/15](15-WARDROBE-DRESS-CODE.md) is LOCKED. The existing “modest neutral” fashion direction is inadequate if it results in above-knee miniskirt/shorts. **Every** avatar/NPC/extras must have conservative Vietnamese pagoda clothing; see manifest [data/avatar-wardrobe.v1.json](../data/avatar-wardrobe.v1.json). Screenshot generated 01/11/2026 is NOT outfit approval.
+
 > **OWNER V3 EXPANSION (2026-11-01):** New required features supersede any conflicting older MVP exclusion. See docs/10–14 and AGENTS.md. Sections below are retained as baseline for initial social/folklore phase, not the entire full-game scope.
 
 # 02 — World, environment, camera and asset production

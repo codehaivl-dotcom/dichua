@@ -1,3 +1,5 @@
+> **NEW MANDATORY RULE:** All player avatars and background NPCs wear modest, appropriate temple attire across every concept/level. No miniskirts, shorts, exposed shoulders, low-cut or sheer clothing. The previously generated 2026-11-01 image has a main character in a short skirt: camera/world fidelity reference ONLY, outfit REJECTED. See docs/15 and data/avatar-wardrobe.v1.json. Apparel failure = art QA fail; don't claim "approved" from image. All future 10 concepts apply this standard.
+
 # AGENTS.md — LOCKED V3 (OWNER 2026-11-01)
 
 **OVERRIDE:** Any older doc saying “no 108, no counting, no sutra, no levels, no multi-chùa” is out of date. Owner approved **all** of these features. Latest owner decision > docs/00 > docs/10–14 expansion > docs/01–09 original baseline > implementation. If an exact enum/timing lives in a data/*.json file, match it; flag discrepancies as DECISION_REQUIRED.

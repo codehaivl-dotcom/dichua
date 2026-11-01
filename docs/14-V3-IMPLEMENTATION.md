@@ -15,3 +15,7 @@ All phases are REQUIRED for full V3; can deliver alpha in earlier phases.
 Developer simulator required: 108 counter packet duplication & pause; bow callback duplication; timed bell/audio player; 40 lamps; annual event timezone; 30 WS clients across maps; server points receipt idempotency. Every phase PR must show runtime video/screens, command outputs, performance numbers and blockers.
 
 **First action for coding agent:** build phase 0/1 runnable before more planning or asset sheets. No feature may be marked done only from this spec.
+
+
+## Locked new art-review gate · 2026-11-01
+Implement [docs/15](15-WARDROBE-DRESS-CODE.md) four temple-appropriate wardrobe presets and audit NPC/crowd clothes BEFORE claiming Phase 4 art ready. Record DRESS-01..DRESS-06 passes with actual render/rig walk, lạy 108, sit, tràng hạt, tea. Follow the **10-scene concept board** docs/16; the one ChatGPT Chùa Sen concept is camera/environment reference only and its short skirt is rejected. Do not say 10 images exist in repo until actual image files are committed.

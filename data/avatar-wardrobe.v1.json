@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "approvalDate": "2026-11-01",
+  "dressCode": "TEMPLE_MODEST_FORMAL",
+  "appliesTo": [
+    "ALL_PLAYER_AVATARS",
+    "ALL_NPC",
+    "ALL_BACKGROUND_EXTRAS",
+    "ALL_CONCEPT_ART",
+    "ALL_THREE_PAGODA_MAPS"
+  ],
+  "rules": {
+    "shouldersCovered": true,
+    "neckline": "HIGH_OR_MODEST",
+    "sleeves": "FULL_LENGTH_PREFERRED_AT_LEAST_UPPER_ARM_COVERED",
+    "pants": "ANKLE_LENGTH",
+    "skirt": "BELOW_KNEE_PREFER_MID_CALF_OR_LONG",
+    "allowed": [
+      "ao_lam_quan_dai",
+      "ao_dai_quan_dai",
+      "somi_quan_dai",
+      "modest_cardigan_quan_dai"
+    ],
+    "prohibited": [
+      "mini_skirt",
+      "short_shorts",
+      "crop_top",
+      "off_shoulder",
+      "see_through_fabric",
+      "plunging_neckline",
+      "open_back",
+      "beachwear",
+      "sexualized_design"
+    ],
+    "noGenderMandatoryUniform": true
+  },
+  "presets": [
+    {
+      "id": "OUTFIT_AO_LAM",
+      "labelVi": "Áo lam thanh lịch",
+      "silhouette": "long_sleeve_ao_lam_with_loose_ankle_length_trousers",
+      "palette": [
+        "ash_grey",
+        "soft_blue"
+      ],
+      "rigGroup": "HUMANOID_V1"
+    },
+    {
+      "id": "OUTFIT_AO_DAI",
+      "labelVi": "Áo dài truyền thống",
+      "silhouette": "high_neck_long_sleeve_ao_dai_over_full_length_trousers",
+      "palette": [
+        "warm_cream",
+        "muted_sage"
+      ],
+      "rigGroup": "HUMANOID_V1"
+    },
+    {
+      "id": "OUTFIT_SOMI",
+      "labelVi": "Sơ mi trang nhã",
+      "silhouette": "long_sleeve_shirt_and_ankle_length_trousers",
+      "palette": [
+        "ivory",
+        "earth_brown"
+      ],
+      "rigGroup": "HUMANOID_V1"
+    },
+    {
+      "id": "OUTFIT_CASUAL_MODEST",
+      "labelVi": "Đời thường lịch sự",
+      "silhouette": "covered_cardigan_or_long_sleeve_top_and_full_length_trousers",
+      "palette": [
+        "taupe",
+        "moss_green"
+      ],
+      "rigGroup": "HUMANOID_V1"
+    }
+  ],
+  "qualityGates": [
+    "DRESS-01",
+    "DRESS-02",
+    "DRESS-03",
+    "DRESS-04",
+    "DRESS-05",
+    "DRESS-06"
+  ],
+  "originalConceptImageStatus": "CHAT_GENERATED_NOT_IN_REPO",
+  "correctedConceptImageStatus": "NOT_YET_RENDERED"
+}

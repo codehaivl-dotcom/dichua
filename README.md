@@ -1,3 +1,5 @@
+> **OWNER ART UPDATE 2026-11-01:** All visitors/NPCs in every pagoda scene must wear **modest, formal, temple-appropriate clothing**. The previously generated Chùa Sen reference image's mini skirt is **NOT approved**. See [dress code](docs/15-WARDROBE-DRESS-CODE.md) and [10 gameplay concepts](docs/16-CONCEPT-ART-BOARD.md).
+
 # Đi Chùa Online — FULL SPEC V3 (2026-11-01)
 
 **Status: specification committed; game code not implemented yet.**
