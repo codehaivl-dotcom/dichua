@@ -1,0 +1,221 @@
+{
+  "schemaVersion": 1,
+  "contentVersion": 1,
+  "disclaimer": "Hoạt động mang tính giải trí và trải nghiệm văn hóa; không dự đoán hay thay đổi số phận.",
+  "loveSolo": [
+    {
+      "id": "LS01",
+      "title": "Bước mở đầu",
+      "text": "Điều thú vị đôi khi bắt đầu từ một cuộc trò chuyện rất bình thường.",
+      "conversationPrompt": "Bạn thích bắt đầu câu chuyện bằng điều gì?"
+    },
+    {
+      "id": "LS02",
+      "title": "Chậm một nhịp",
+      "text": "Không phải cuộc gặp nào cũng cần vội. Sự thoải mái đôi khi đến từ việc lắng nghe.",
+      "conversationPrompt": "Một buổi chiều thư thả của bạn trông thế nào?"
+    },
+    {
+      "id": "LS03",
+      "title": "Nụ cười mới",
+      "text": "Một lời chào tử tế có thể khiến ngày hôm nay dễ thương hơn.",
+      "conversationPrompt": "Điều nhỏ nào thường khiến bạn mỉm cười?"
+    },
+    {
+      "id": "LS04",
+      "title": "Đường vòng",
+      "text": "Có những cuộc gặp đáng nhớ đến từ nơi bạn không định ghé.",
+      "conversationPrompt": "Bạn từng tình cờ tìm được nơi nào hay ho?"
+    },
+    {
+      "id": "LS05",
+      "title": "Góc quen",
+      "text": "Đôi khi sự thân thuộc được xây từ những lần gặp ngắn và chân thành.",
+      "conversationPrompt": "Bạn có quán quen hoặc chỗ ngồi yêu thích không?"
+    },
+    {
+      "id": "LS06",
+      "title": "Lắng nghe",
+      "text": "Một người biết lắng nghe có thể làm câu chuyện trở nên nhẹ nhàng hơn.",
+      "conversationPrompt": "Bạn thích nghe kể chuyện gì?"
+    },
+    {
+      "id": "LS07",
+      "title": "Một tách trà",
+      "text": "Chia sẻ một khoảng lặng cũng có thể là cách bắt đầu tình bạn.",
+      "conversationPrompt": "Bạn chọn trà nóng hay trà đá?"
+    },
+    {
+      "id": "LS08",
+      "title": "Hẹn ở vườn",
+      "text": "Nếu muốn làm quen, một lời mời lịch sự là đủ. Người kia luôn có quyền từ chối.",
+      "conversationPrompt": "Bạn thích ngắm hoa hay ngắm trời?"
+    },
+    {
+      "id": "LS09",
+      "title": "Mùa mới",
+      "text": "Bạn có thể mở lòng với điều mới theo nhịp của chính mình.",
+      "conversationPrompt": "Có điều gì bạn muốn thử trong tháng này?"
+    },
+    {
+      "id": "LS10",
+      "title": "Điều chân thành",
+      "text": "Không cần một màn giới thiệu hoàn hảo để bắt đầu kết nối.",
+      "conversationPrompt": "Một điều tốt bạn nhận thấy ở bạn bè là gì?"
+    },
+    {
+      "id": "LS11",
+      "title": "Khoảng riêng",
+      "text": "Giữ không gian riêng cũng là một phần của những mối quan hệ lành mạnh.",
+      "conversationPrompt": "Bạn thích dành thời gian một mình như thế nào?"
+    },
+    {
+      "id": "LS12",
+      "title": "Gặp đúng lúc",
+      "text": "Đừng vội gán ý nghĩa lớn cho một cuộc gặp. Hãy tận hưởng điều đang diễn ra.",
+      "conversationPrompt": "Hôm nay bạn mong có một cuộc trò chuyện về chủ đề gì?"
+    }
+  ],
+  "pairLove": [
+    {
+      "id": "LP01",
+      "title": "Hai lối rẽ",
+      "text": "Hai người có thể có sở thích khác nhau mà vẫn tìm được niềm vui chung.",
+      "conversationPrompt": "Mỗi người hãy kể một nơi mình muốn ghé."
+    },
+    {
+      "id": "LP02",
+      "title": "Bên tách trà",
+      "text": "Một cuộc chuyện trò vui bắt đầu khi cả hai có cơ hội lên tiếng.",
+      "conversationPrompt": "Bạn chọn món uống nào cho buổi gặp này?"
+    },
+    {
+      "id": "LP03",
+      "title": "Nhịp bước",
+      "text": "Có người thích khám phá nhanh, có người thích thong thả. Hai kiểu đều thú vị.",
+      "conversationPrompt": "Cùng chọn một góc để đi dạo nhé?"
+    },
+    {
+      "id": "LP04",
+      "title": "Hai mùa",
+      "text": "Những khác biệt nhỏ có thể mở ra chuyện kể thú vị.",
+      "conversationPrompt": "Bạn thích ngày nắng hay ngày mưa?"
+    },
+    {
+      "id": "LP05",
+      "title": "Tấm ảnh nhỏ",
+      "text": "Kỷ niệm đẹp đôi khi chỉ là tấm hình và một lời chào chân thành.",
+      "conversationPrompt": "Bạn có muốn cùng chụp ảnh lưu niệm không?"
+    },
+    {
+      "id": "LP06",
+      "title": "Điều giản dị",
+      "text": "Một lời cảm ơn đúng lúc khiến bất kỳ cuộc gặp nào cũng ấm áp.",
+      "conversationPrompt": "Hãy kể về một cử chỉ tử tế bạn nhớ."
+    },
+    {
+      "id": "LP07",
+      "title": "Câu chuyện mới",
+      "text": "Mỗi người mang theo một câu chuyện, nhưng không cần kể điều riêng tư.",
+      "conversationPrompt": "Hôm nay có điều gì vui bạn muốn chia sẻ?"
+    },
+    {
+      "id": "LP08",
+      "title": "Đường về",
+      "text": "Một lời hẹn chỉ thật sự vui khi hai người cùng muốn.",
+      "conversationPrompt": "Có nơi nào cả hai muốn khám phá trong game?"
+    },
+    {
+      "id": "LP09",
+      "title": "Lắng tai",
+      "text": "Hãy thử luân phiên kể và nghe, không cần vội trả lời.",
+      "conversationPrompt": "Bạn thích nhạc nền nhẹ hay tiếng gió?"
+    },
+    {
+      "id": "LP10",
+      "title": "Một món ăn",
+      "text": "Một chủ đề gần gũi có thể mở đầu một tình bạn.",
+      "conversationPrompt": "Nếu đi ăn cùng nhóm, bạn sẽ chọn món gì?"
+    },
+    {
+      "id": "LP11",
+      "title": "Buổi hẹn nhẹ",
+      "text": "Sự thoải mái quan trọng hơn mọi lời dự đoán. Cứ để mỗi người tự quyết định.",
+      "conversationPrompt": "Muốn dạo vườn hay ngồi trà?"
+    },
+    {
+      "id": "LP12",
+      "title": "Tình bạn trước",
+      "text": "Gặp nhau để vui, không cần gắn nhãn mối quan hệ.",
+      "conversationPrompt": "Điều gì làm một tình bạn dễ chịu?"
+    }
+  ],
+  "stars": [
+    {
+      "id": "ST_BINH_AN",
+      "intention": "binh_an",
+      "title": "Bình an",
+      "text": "Một khoảng nghỉ và một hơi thở sâu có thể giúp hôm nay nhẹ hơn."
+    },
+    {
+      "id": "ST_GIA_DINH",
+      "intention": "gia_dinh",
+      "title": "Gia đình",
+      "text": "Một câu hỏi thăm chân thành đôi khi đã là món quà quý."
+    },
+    {
+      "id": "ST_CONG_VIEC",
+      "intention": "cong_viec",
+      "title": "Công việc",
+      "text": "Chia công việc thành bước nhỏ giúp hành trình bớt nặng nề."
+    },
+    {
+      "id": "ST_TINH_CAM",
+      "intention": "tinh_cam",
+      "title": "Tình cảm",
+      "text": "Lắng nghe và tôn trọng lựa chọn của nhau là nền tảng đáng quý."
+    }
+  ],
+  "cutTies": [
+    {
+      "id": "CT01",
+      "title": "Lời nhắn nhẹ lòng",
+      "text": "Đôi khi khép một câu chuyện là để dành chỗ cho những điều bình dị phía trước."
+    },
+    {
+      "id": "CT02",
+      "title": "Lời nhắn nhẹ lòng",
+      "text": "Bạn có quyền thay đổi quyết định và bắt đầu lại bằng nhịp điệu của mình."
+    },
+    {
+      "id": "CT03",
+      "title": "Lời nhắn nhẹ lòng",
+      "text": "Nhớ một điều cũ không có nghĩa phải quay lại điều đó."
+    },
+    {
+      "id": "CT04",
+      "title": "Lời nhắn nhẹ lòng",
+      "text": "Điều chưa nói có thể được giữ như một bài học, không phải một gánh nặng."
+    },
+    {
+      "id": "CT05",
+      "title": "Lời nhắn nhẹ lòng",
+      "text": "Một cuộc gặp mới không cần giống bất kỳ cuộc gặp nào trước đó."
+    },
+    {
+      "id": "CT06",
+      "title": "Lời nhắn nhẹ lòng",
+      "text": "Buông xuống trong trò chơi này là biểu tượng của sự nhẹ lòng, không phải phép thuật."
+    },
+    {
+      "id": "CT07",
+      "title": "Lời nhắn nhẹ lòng",
+      "text": "Bạn vẫn tự lựa chọn những gì tốt và an toàn cho bản thân."
+    },
+    {
+      "id": "CT08",
+      "title": "Lời nhắn nhẹ lòng",
+      "text": "Không có sợi chỉ nào quyết định tương lai của bạn. Mỗi ngày là một cơ hội mới."
+    }
+  ]
+}

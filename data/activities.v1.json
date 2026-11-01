@@ -1,0 +1,174 @@
+{
+  "schemaVersion": 1,
+  "orderedInteractionPriority": [
+    "pairOracle",
+    "soloOracle",
+    "cutTies",
+    "starOffering",
+    "incense",
+    "bell",
+    "sit",
+    "tea",
+    "photo",
+    "wave"
+  ],
+  "activities": [
+    {
+      "id": "soloOracle",
+      "anchorId": "ORACLE_SOLO",
+      "maxRange": 1.8,
+      "cooldownAfterRevealMs": 60000,
+      "serverSelectPool": "loveSolo",
+      "pairRequired": false,
+      "phases": [
+        "INTRO",
+        "SELECT_TOKEN",
+        "REVEAL",
+        "RESULT"
+      ],
+      "durationEstimateSec": [
+        25,
+        60
+      ]
+    },
+    {
+      "id": "pairOracle",
+      "anchorId": "ORACLE_PAIR",
+      "maxRange": 2,
+      "partnerDistanceMax": 3,
+      "timeoutInviteMs": 30000,
+      "timeoutTokenMs": 20000,
+      "maxDistanceAfterStart": 8,
+      "cooldownAfterRevealMs": 60000,
+      "serverSelectPool": "pairLove",
+      "pairRequired": true,
+      "phases": [
+        "INVITE",
+        "ACCEPT",
+        "READY",
+        "SELECT_TOKEN_BOTH",
+        "REVEAL",
+        "RESULT"
+      ],
+      "durationEstimateSec": [
+        30,
+        90
+      ]
+    },
+    {
+      "id": "starOffering",
+      "anchorId": "STAR_PAVILION",
+      "maxRange": 1.8,
+      "cooldownAfterRevealMs": 60000,
+      "serverSelectPool": "stars",
+      "intentions": [
+        "binh_an",
+        "gia_dinh",
+        "cong_viec",
+        "tinh_cam"
+      ],
+      "socketCount": 8,
+      "glowTimeMs": 45000,
+      "phases": [
+        "CHOOSE_INTENTION",
+        "ALIGN_STAR",
+        "LIGHT",
+        "RESULT"
+      ],
+      "durationEstimateSec": [
+        45,
+        90
+      ]
+    },
+    {
+      "id": "cutTies",
+      "anchorId": "CUT_TIES_START",
+      "maxRange": 2,
+      "serverSelectPool": "cutTies",
+      "phases": [
+        "SOI_GUONG",
+        "GO_CHI",
+        "THA_DEN",
+        "RESULT"
+      ],
+      "ringStates": [
+        0,
+        1,
+        2
+      ],
+      "ringWinState": [
+        0,
+        0,
+        0
+      ],
+      "maxSolutionClicks": 6,
+      "storyResumeGraceMs": 600000,
+      "durationEstimateSec": [
+        60,
+        150
+      ]
+    },
+    {
+      "id": "incense",
+      "anchorId": "INCENSE",
+      "maxRange": 1.6,
+      "clipMs": 2100,
+      "cooldownMs": 15000
+    },
+    {
+      "id": "bell",
+      "anchorId": "BELL",
+      "maxRange": 1.5,
+      "clipMs": 1600,
+      "cooldownMs": 8000
+    },
+    {
+      "id": "sit",
+      "maxRange": 1.6,
+      "clipEnterMs": 1100,
+      "clipExitMs": 800,
+      "seatReservationMs": 3000
+    },
+    {
+      "id": "tea",
+      "anchorId": "TEA_TABLE_01",
+      "maxRange": 1.6,
+      "inviteExpirationMs": 30000,
+      "seatReservationMs": 25000
+    },
+    {
+      "id": "photo",
+      "anchorId": "PHOTO_POND",
+      "maxRange": 2,
+      "inviteExpirationMs": 20000,
+      "captureCooldownMs": 5000
+    },
+    {
+      "id": "wave",
+      "clipMs": 1100,
+      "cooldownMs": 2000
+    }
+  ],
+  "social": {
+    "chatRangeM": 16,
+    "nearbyMessageMaxGraphemes": 160,
+    "nearbyCooldownMs": 2000,
+    "nearbyMessagesPerMinute": 10,
+    "dmMaxGraphemes": 500,
+    "dmMessagesPerMinute": 20,
+    "friendRequestsPerDay": 10,
+    "friendRequestsPerMinute": 3,
+    "friendRequestExpiryDays": 7,
+    "pairInvitesPerMinute": 3,
+    "blockOverridesAll": true
+  },
+  "network": {
+    "serverTickHz": 20,
+    "snapshotHz": 10,
+    "inputMaxHz": 20,
+    "roomInitialCapacity": 30,
+    "roomMaxAfterValidation": 50,
+    "reconnectGraceMs": 8000,
+    "idempotencyCacheMs": 120000
+  }
+}

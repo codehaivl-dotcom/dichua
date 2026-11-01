@@ -1,0 +1,565 @@
+{
+  "schemaVersion": 1,
+  "worldId": "chua-social-v1",
+  "coordinateSystem": "Y-up, meter, north=-Z",
+  "bounds": {
+    "minX": -70,
+    "maxX": 70,
+    "minZ": -70,
+    "maxZ": 80
+  },
+  "spawnPads": [
+    [
+      0,
+      0,
+      63
+    ],
+    [
+      3,
+      0,
+      63
+    ],
+    [
+      -3,
+      0,
+      63
+    ],
+    [
+      6,
+      0,
+      64
+    ],
+    [
+      -6,
+      0,
+      64
+    ],
+    [
+      0,
+      0,
+      67
+    ]
+  ],
+  "zoneResolution": "highest priority contains wins, tie smallest id lexical",
+  "zones": [
+    {
+      "id": "Z_GATE",
+      "name": "Cổng tam quan",
+      "priority": 80,
+      "bounds": {
+        "minX": -10,
+        "maxX": 10,
+        "minZ": 56,
+        "maxZ": 73
+      },
+      "chatNearby": true
+    },
+    {
+      "id": "Z_STREET",
+      "name": "Phố trước chùa",
+      "priority": 10,
+      "bounds": {
+        "minX": -70,
+        "maxX": 70,
+        "minZ": 44,
+        "maxZ": 80
+      },
+      "chatNearby": true
+    },
+    {
+      "id": "Z_COURTYARD",
+      "name": "Sân chùa",
+      "priority": 20,
+      "bounds": {
+        "minX": -42,
+        "maxX": 42,
+        "minZ": -30,
+        "maxZ": 45
+      },
+      "chatNearby": true
+    },
+    {
+      "id": "Z_HALL",
+      "name": "Chính điện",
+      "priority": 100,
+      "bounds": {
+        "minX": -19,
+        "maxX": 19,
+        "minZ": -59,
+        "maxZ": -23
+      },
+      "chatNearby": false
+    },
+    {
+      "id": "Z_LOVE",
+      "name": "Vườn duyên",
+      "priority": 75,
+      "bounds": {
+        "minX": 27,
+        "maxX": 67,
+        "minZ": -55,
+        "maxZ": 18
+      },
+      "chatNearby": true
+    },
+    {
+      "id": "Z_FOLK",
+      "name": "Sân văn hóa dân gian",
+      "priority": 75,
+      "bounds": {
+        "minX": -68,
+        "maxX": -26,
+        "minZ": -56,
+        "maxZ": 10
+      },
+      "chatNearby": true
+    },
+    {
+      "id": "Z_TEA",
+      "name": "Quán trà",
+      "priority": 90,
+      "bounds": {
+        "minX": -60,
+        "maxX": -25,
+        "minZ": 24,
+        "maxZ": 56
+      },
+      "chatNearby": true
+    },
+    {
+      "id": "Z_POND",
+      "name": "Hồ sen",
+      "priority": 90,
+      "bounds": {
+        "minX": 32,
+        "maxX": 67,
+        "minZ": 16,
+        "maxZ": 56
+      },
+      "chatNearby": true
+    }
+  ],
+  "npc": [
+    {
+      "id": "NPC_THIEN",
+      "zone": "Z_GATE",
+      "pos": [
+        0,
+        0,
+        57
+      ]
+    },
+    {
+      "id": "NPC_DUYEN",
+      "zone": "Z_LOVE",
+      "pos": [
+        44,
+        0,
+        -12
+      ]
+    },
+    {
+      "id": "NPC_SAO",
+      "zone": "Z_FOLK",
+      "pos": [
+        -43,
+        0,
+        -9
+      ]
+    },
+    {
+      "id": "NPC_AN",
+      "zone": "Z_FOLK",
+      "pos": [
+        -48,
+        0,
+        -36
+      ]
+    }
+  ],
+  "anchors": [
+    {
+      "id": "ORACLE_SOLO",
+      "zone": "Z_LOVE",
+      "pos": [
+        42,
+        0,
+        -16
+      ],
+      "range": 1.8
+    },
+    {
+      "id": "ORACLE_PAIR",
+      "zone": "Z_LOVE",
+      "pos": [
+        53,
+        0,
+        -16
+      ],
+      "range": 2,
+      "partnerPads": [
+        [
+          51.5,
+          0,
+          -18
+        ],
+        [
+          54.5,
+          0,
+          -18
+        ]
+      ]
+    },
+    {
+      "id": "STAR_PAVILION",
+      "zone": "Z_FOLK",
+      "pos": [
+        -40,
+        0,
+        -13
+      ],
+      "range": 1.8
+    },
+    {
+      "id": "CUT_TIES_START",
+      "zone": "Z_FOLK",
+      "pos": [
+        -48,
+        0,
+        -36
+      ],
+      "range": 2
+    },
+    {
+      "id": "CUT_TIES_MIRROR",
+      "zone": "Z_FOLK",
+      "pos": [
+        -52,
+        0,
+        -34
+      ],
+      "range": 1.6
+    },
+    {
+      "id": "CUT_TIES_RINGS",
+      "zone": "Z_FOLK",
+      "pos": [
+        -54,
+        0,
+        -38
+      ],
+      "range": 1.6
+    },
+    {
+      "id": "CUT_TIES_LANTERN",
+      "zone": "Z_FOLK",
+      "pos": [
+        -50,
+        0,
+        -42
+      ],
+      "range": 1.6
+    },
+    {
+      "id": "TEA_TABLE_01",
+      "zone": "Z_TEA",
+      "pos": [
+        -42,
+        0,
+        37
+      ],
+      "range": 1.6
+    },
+    {
+      "id": "TEA_TABLE_02",
+      "zone": "Z_TEA",
+      "pos": [
+        -49,
+        0,
+        37
+      ],
+      "range": 1.6
+    },
+    {
+      "id": "TEA_TABLE_03",
+      "zone": "Z_TEA",
+      "pos": [
+        -42,
+        0,
+        45
+      ],
+      "range": 1.6
+    },
+    {
+      "id": "TEA_TABLE_04",
+      "zone": "Z_TEA",
+      "pos": [
+        -49,
+        0,
+        45
+      ],
+      "range": 1.6
+    },
+    {
+      "id": "PHOTO_POND",
+      "zone": "Z_POND",
+      "pos": [
+        42,
+        0,
+        31
+      ],
+      "range": 2
+    },
+    {
+      "id": "INCENSE",
+      "zone": "Z_HALL",
+      "pos": [
+        -9,
+        0,
+        -27
+      ],
+      "range": 1.6
+    },
+    {
+      "id": "BELL",
+      "zone": "Z_HALL",
+      "pos": [
+        9,
+        0,
+        -27
+      ],
+      "range": 1.5
+    }
+  ],
+  "seatLayout": {
+    "hall": [
+      {
+        "id": "MAT_01",
+        "pos": [
+          -6,
+          0,
+          -37
+        ],
+        "yaw": 0
+      },
+      {
+        "id": "MAT_02",
+        "pos": [
+          -3,
+          0,
+          -37
+        ],
+        "yaw": 0
+      },
+      {
+        "id": "MAT_03",
+        "pos": [
+          3,
+          0,
+          -37
+        ],
+        "yaw": 0
+      },
+      {
+        "id": "MAT_04",
+        "pos": [
+          6,
+          0,
+          -37
+        ],
+        "yaw": 0
+      },
+      {
+        "id": "MAT_05",
+        "pos": [
+          -6,
+          0,
+          -40
+        ],
+        "yaw": 0
+      },
+      {
+        "id": "MAT_06",
+        "pos": [
+          -3,
+          0,
+          -40
+        ],
+        "yaw": 0
+      },
+      {
+        "id": "MAT_07",
+        "pos": [
+          3,
+          0,
+          -40
+        ],
+        "yaw": 0
+      },
+      {
+        "id": "MAT_08",
+        "pos": [
+          6,
+          0,
+          -40
+        ],
+        "yaw": 0
+      },
+      {
+        "id": "MAT_09",
+        "pos": [
+          -6,
+          0,
+          -43
+        ],
+        "yaw": 0
+      },
+      {
+        "id": "MAT_10",
+        "pos": [
+          -3,
+          0,
+          -43
+        ],
+        "yaw": 0
+      },
+      {
+        "id": "MAT_11",
+        "pos": [
+          3,
+          0,
+          -43
+        ],
+        "yaw": 0
+      },
+      {
+        "id": "MAT_12",
+        "pos": [
+          6,
+          0,
+          -43
+        ],
+        "yaw": 0
+      },
+      {
+        "id": "MAT_13",
+        "pos": [
+          -6,
+          0,
+          -46
+        ],
+        "yaw": 0
+      },
+      {
+        "id": "MAT_14",
+        "pos": [
+          -3,
+          0,
+          -46
+        ],
+        "yaw": 0
+      },
+      {
+        "id": "MAT_15",
+        "pos": [
+          3,
+          0,
+          -46
+        ],
+        "yaw": 0
+      },
+      {
+        "id": "MAT_16",
+        "pos": [
+          6,
+          0,
+          -46
+        ],
+        "yaw": 0
+      }
+    ],
+    "tea": [
+      {
+        "id": "TEA_SEAT_01",
+        "tableId": "TEA_TABLE_01",
+        "seatIndex": 0
+      },
+      {
+        "id": "TEA_SEAT_02",
+        "tableId": "TEA_TABLE_01",
+        "seatIndex": 1
+      },
+      {
+        "id": "TEA_SEAT_03",
+        "tableId": "TEA_TABLE_01",
+        "seatIndex": 2
+      },
+      {
+        "id": "TEA_SEAT_04",
+        "tableId": "TEA_TABLE_01",
+        "seatIndex": 3
+      },
+      {
+        "id": "TEA_SEAT_05",
+        "tableId": "TEA_TABLE_02",
+        "seatIndex": 0
+      },
+      {
+        "id": "TEA_SEAT_06",
+        "tableId": "TEA_TABLE_02",
+        "seatIndex": 1
+      },
+      {
+        "id": "TEA_SEAT_07",
+        "tableId": "TEA_TABLE_02",
+        "seatIndex": 2
+      },
+      {
+        "id": "TEA_SEAT_08",
+        "tableId": "TEA_TABLE_02",
+        "seatIndex": 3
+      },
+      {
+        "id": "TEA_SEAT_09",
+        "tableId": "TEA_TABLE_03",
+        "seatIndex": 0
+      },
+      {
+        "id": "TEA_SEAT_10",
+        "tableId": "TEA_TABLE_03",
+        "seatIndex": 1
+      },
+      {
+        "id": "TEA_SEAT_11",
+        "tableId": "TEA_TABLE_03",
+        "seatIndex": 2
+      },
+      {
+        "id": "TEA_SEAT_12",
+        "tableId": "TEA_TABLE_03",
+        "seatIndex": 3
+      },
+      {
+        "id": "TEA_SEAT_13",
+        "tableId": "TEA_TABLE_04",
+        "seatIndex": 0
+      },
+      {
+        "id": "TEA_SEAT_14",
+        "tableId": "TEA_TABLE_04",
+        "seatIndex": 1
+      },
+      {
+        "id": "TEA_SEAT_15",
+        "tableId": "TEA_TABLE_04",
+        "seatIndex": 2
+      },
+      {
+        "id": "TEA_SEAT_16",
+        "tableId": "TEA_TABLE_04",
+        "seatIndex": 3
+      }
+    ]
+  },
+  "starSockets": 8
+}

@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "optional": true,
+  "noRewards": true,
+  "steps": [
+    {
+      "id": "T01",
+      "goal": "MOVE_DISTANCE_METERS",
+      "threshold": 8,
+      "text": "Bạn đã biết di chuyển"
+    },
+    {
+      "id": "T02",
+      "goal": "COMPLETE_ANY",
+      "actions": [
+        "soloOracle",
+        "starOffering",
+        "bow"
+      ],
+      "text": "Bạn đã thử một trải nghiệm"
+    },
+    {
+      "id": "T03",
+      "goal": "WAVE_AT_PLAYER_OR_NPC_IF_ALONE",
+      "text": "Bạn đã biết chào"
+    },
+    {
+      "id": "T04",
+      "goal": "ENTER_ZONE",
+      "zone": "Z_TEA",
+      "text": "Bạn có thể rủ bạn bè ngồi uống trà"
+    }
+  ]
+}
