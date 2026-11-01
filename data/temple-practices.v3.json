@@ -1,0 +1,182 @@
+{
+  "schemaVersion": 3,
+  "practiceState": [
+    "NEW",
+    "ACTIVE",
+    "PAUSED",
+    "COMPLETED",
+    "CANCELLED"
+  ],
+  "practices": [
+    {
+      "id": "PR_MALA",
+      "label": "Đếm tràng hạt",
+      "modes": [
+        18,
+        54,
+        108
+      ],
+      "button": "Lần hạt",
+      "advanceDebounceMs": 160,
+      "maxVerifiedBeadsPerSecond": 5,
+      "persistInProgress": true,
+      "requiresNetwork": false,
+      "privacyDefault": "PRIVATE",
+      "rewardPerBead": 0
+    },
+    {
+      "id": "PR_BOWS",
+      "label": "Lạy Phật",
+      "modes": [
+        1,
+        9,
+        27,
+        108
+      ],
+      "clipMs": 3000,
+      "incrementOn": "ANIMATION_COMPLETED_VALIDATED",
+      "allowPause": true,
+      "allowAutoAvatarLoopAfterOptIn": true,
+      "restHintAt": 27,
+      "groupOptIn": true,
+      "rewardPerBow": 0
+    },
+    {
+      "id": "PR_SUTRA",
+      "label": "Nghe kinh thật",
+      "catalog": "data/sutras.v1.json",
+      "autoplay": false,
+      "audioPlaybackStatuses": [
+        "CLEARED_LOCAL"
+      ],
+      "externalPlaybackStatuses": [
+        "OFFICIAL_EXTERNAL_LINK"
+      ],
+      "speedOptions": [
+        0.75,
+        1,
+        1.25
+      ],
+      "privateByDefault": true,
+      "rewardPerMinute": 0
+    },
+    {
+      "id": "PR_MOKUGYO",
+      "label": "Gõ mõ",
+      "cycleOptions": [
+        16,
+        32,
+        64
+      ],
+      "minStrikeIntervalMs": 200,
+      "defaultScoreMode": "OFF",
+      "serverSyncEveryMs": 2000
+    },
+    {
+      "id": "PR_MEDITATE",
+      "label": "Thiền",
+      "durationsMin": [
+        1,
+        3,
+        5,
+        10
+      ],
+      "freeMode": true,
+      "inhaleSeconds": 4,
+      "exhaleSeconds": 6,
+      "breathingGuideOptional": true,
+      "groupOptIn": true,
+      "rewardPerMinute": 0
+    },
+    {
+      "id": "PR_LANTERN",
+      "label": "Hoa đăng",
+      "intentions": [
+        "binh_an",
+        "gia_dinh",
+        "tinh_ban",
+        "hoc_tap",
+        "cong_viec",
+        "suc_khoe",
+        "biet_on",
+        "loi_chuc_chung"
+      ],
+      "colors": [
+        "lotus_white",
+        "lotus_pink",
+        "lotus_yellow"
+      ],
+      "publicWishDefault": false,
+      "customTextMaxGraphemes": 100,
+      "allowUnmoderatedPublicWish": false,
+      "sharedLanternMax": 40,
+      "lifetimeMs": 24000,
+      "cooldownMs": 15000
+    },
+    {
+      "id": "PR_OFFERINGS",
+      "label": "Dâng lễ",
+      "subtypes": [
+        {
+          "id": "incense",
+          "clipMs": 2100,
+          "cooldownMs": 15000
+        },
+        {
+          "id": "flower",
+          "clipMs": 2200,
+          "cooldownMs": 15000
+        },
+        {
+          "id": "light",
+          "clipMs": 2200,
+          "cooldownMs": 20000,
+          "visibleMs": 30000
+        },
+        {
+          "id": "fruit",
+          "clipMs": 2400,
+          "cooldownMs": 30000,
+          "visibleMs": 45000
+        }
+      ],
+      "free": true
+    },
+    {
+      "id": "PR_XAM",
+      "label": "Xin xăm mô phỏng",
+      "pool": "data/xam.v1.json",
+      "shakeMs": 2500,
+      "cooldownMs": 60000,
+      "sourceType": "GAME_AUTHORED",
+      "privateByDefault": true
+    },
+    {
+      "id": "PR_WISH",
+      "label": "Cầu an",
+      "intents": [
+        "binh_an",
+        "suc_khoe",
+        "gia_dinh",
+        "tinh_ban",
+        "tri_an"
+      ],
+      "privateByDefault": true,
+      "requiresPersonalData": false,
+      "clipMs": 2000
+    },
+    {
+      "id": "PR_JOURNAL",
+      "label": "Sổ hành hương",
+      "tabs": [
+        "Chùa đã ghé",
+        "Hoạt động",
+        "Quẻ riêng",
+        "Kinh đã nghe",
+        "Bạn bè"
+      ],
+      "supportsExport": true,
+      "supportsDelete": true
+    }
+  ]
+}

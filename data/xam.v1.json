@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 1,
+  "sourceType": "GAME_AUTHORED_REFLECTION",
+  "notice": "Xin xăm mô phỏng – lời xăm do game biên soạn. Không phải xăm cổ hoặc tiên đoán thật.",
+  "slips": [
+    {
+      "id": "XAM_01",
+      "number": 1,
+      "title": "Chậm một nhịp",
+      "poem": "Đi xa không ngại đường quanh, bình tâm rồi sẽ thấy quanh mình đường.",
+      "reflection": "Hãy chọn một bước vừa sức trong tuần này."
+    },
+    {
+      "id": "XAM_02",
+      "number": 2,
+      "title": "Chuyện ở hiên nhà",
+      "poem": "Hiên xưa đón ánh nắng hiền, hỏi thăm một tiếng cũng nên nghĩa tình.",
+      "reflection": "Một lời hỏi thăm có thể là khởi đầu tốt."
+    },
+    {
+      "id": "XAM_03",
+      "number": 3,
+      "title": "Gió qua tán lá",
+      "poem": "Lá nghiêng theo gió nhẹ nhàng, lòng người cần lúc thong dong nghỉ ngơi.",
+      "reflection": "Nghỉ ngơi cũng là một lựa chọn tốt."
+    },
+    {
+      "id": "XAM_04",
+      "number": 4,
+      "title": "Hoa bên sân gạch",
+      "poem": "Hoa nở chẳng đợi ai nhìn, mỗi điều giản dị tự mình đáng yêu.",
+      "reflection": "Hãy nhận ra một điều nhỏ đáng quý hôm nay."
+    },
+    {
+      "id": "XAM_05",
+      "number": 5,
+      "title": "Ngọn đèn",
+      "poem": "Đèn soi một góc sân chiều, chuyện xa chuyện gần cũng đều từng bước.",
+      "reflection": "Đặt mục tiêu nhỏ trước khi nghĩ đến chuyện lớn."
+    },
+    {
+      "id": "XAM_06",
+      "number": 6,
+      "title": "Lối gạch đỏ",
+      "poem": "Đường dài chia mỗi bước chân, đi cùng người quý càng gần niềm vui.",
+      "reflection": "Có thể rủ bạn làm một việc đơn giản."
+    },
+    {
+      "id": "XAM_07",
+      "number": 7,
+      "title": "Tách trà",
+      "poem": "Chén trà ấm giữa trời thu, lời hay từ tốn đủ ru lòng người.",
+      "reflection": "Nói chậm và lắng nghe nhau."
+    },
+    {
+      "id": "XAM_08",
+      "number": 8,
+      "title": "Bên hồ sen",
+      "poem": "Hồ trong gợn sóng đôi bờ, nghĩ sâu một chút bớt chờ điều xa.",
+      "reflection": "Hãy dành thời gian cho điều đang có."
+    },
+    {
+      "id": "XAM_09",
+      "number": 9,
+      "title": "Tiếng chuông",
+      "poem": "Chuông ngân không giục ai về, mỗi người một nhịp, chớ hề so đo.",
+      "reflection": "Đừng so sánh hành trình của mình với người khác."
+    },
+    {
+      "id": "XAM_10",
+      "number": 10,
+      "title": "Bóng cây",
+      "poem": "Cây cao nhờ những ngày dài, điều hay cũng đến từ vài bước quen.",
+      "reflection": "Giữ thói quen tốt bằng việc nhỏ."
+    },
+    {
+      "id": "XAM_11",
+      "number": 11,
+      "title": "Mây trắng",
+      "poem": "Mây qua trời vẫn rộng xanh, điều chưa rõ cứ để dành hôm sau.",
+      "reflection": "Không cần quyết định mọi thứ ngay lập tức."
+    },
+    {
+      "id": "XAM_12",
+      "number": 12,
+      "title": "Lời hẹn",
+      "poem": "Nếu mong gặp bạn gần xa, hãy mời bằng một lời hòa nhã thôi.",
+      "reflection": "Lời mời vui chỉ khi người kia được chọn."
+    }
+  ]
+}

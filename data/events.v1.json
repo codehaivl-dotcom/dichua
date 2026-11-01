@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "timezone": "Asia/Ho_Chi_Minh",
+  "schedules": [
+    {
+      "id": "EV_LANTERN",
+      "label": "Cùng thả hoa đăng",
+      "rrule": "FREQ=DAILY;BYHOUR=19;BYMINUTE=30;BYSECOND=0",
+      "durationMin": 15,
+      "mapId": "CHUA_SEN",
+      "activityId": "PR_LANTERN"
+    },
+    {
+      "id": "EV_MALA",
+      "label": "Cùng lần tràng hạt",
+      "rrule": "FREQ=DAILY;BYHOUR=20;BYMINUTE=0;BYSECOND=0",
+      "durationMin": 10,
+      "mapId": "CHUA_SEN",
+      "activityId": "PR_MALA"
+    },
+    {
+      "id": "EV_BOWS",
+      "label": "Lễ chung",
+      "rrule": "FREQ=WEEKLY;BYDAY=SA;BYHOUR=20;BYMINUTE=15;BYSECOND=0",
+      "durationMin": 15,
+      "mapId": "CHUA_SEN",
+      "activityId": "PR_BOWS"
+    },
+    {
+      "id": "EV_SUTRA",
+      "label": "Cùng nghe kinh",
+      "rrule": "FREQ=WEEKLY;BYDAY=SU;BYHOUR=20;BYMINUTE=15;BYSECOND=0",
+      "durationMin": 15,
+      "mapId": "CHUA_SEN",
+      "activityId": "PR_SUTRA",
+      "requiresLocalAudioRights": true,
+      "externalFallback": true
+    }
+  ],
+  "optInRequired": true,
+  "allowSolo": true,
+  "displayGuestCountFrom": "SERVER",
+  "broadcastNearbyOnly": true,
+  "hasBrowserPush": false
+}

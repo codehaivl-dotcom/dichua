@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "maps": [
+    {
+      "id": "CHUA_SEN",
+      "name": "Chùa Sen",
+      "type": "MAIN_SOCIAL_HUB",
+      "sceneId": "chua-social-v1",
+      "dimensionsMeters": [
+        140,
+        150
+      ],
+      "roomCapacityInitial": 30,
+      "enabledActivities": "ALL",
+      "spawnAt": "Z_GATE",
+      "isRealPlace": false
+    },
+    {
+      "id": "CHUA_TRUC",
+      "name": "Chùa Trúc",
+      "type": "SATELLITE_PAGODA",
+      "dimensionsMeters": [
+        55,
+        65
+      ],
+      "roomCapacityInitial": 30,
+      "features": [
+        "PR_MALA",
+        "PR_BOWS",
+        "PR_SUTRA",
+        "PR_MEDITATE",
+        "PR_JOURNAL",
+        "tea",
+        "photo"
+      ],
+      "matCount": 8,
+      "photoViewpoints": 2,
+      "isRealPlace": false,
+      "artTheme": "Vietnamese tile pagoda in bamboo grove"
+    },
+    {
+      "id": "CHUA_MAY",
+      "name": "Chùa Mây",
+      "type": "SATELLITE_PAGODA",
+      "dimensionsMeters": [
+        55,
+        65
+      ],
+      "roomCapacityInitial": 30,
+      "features": [
+        "PR_LANTERN",
+        "PR_MEDITATE",
+        "PR_SUTRA",
+        "PR_BOWS",
+        "PR_JOURNAL",
+        "photo"
+      ],
+      "matCount": 8,
+      "photoViewpoints": 2,
+      "isRealPlace": false,
+      "artTheme": "Vietnamese lakeside pagoda, stylized soft morning mist"
+    }
+  ],
+  "travel": {
+    "serverValidated": true,
+    "transactionalTransfer": true,
+    "rollBackOnFailure": true,
+    "persistFriendsAcrossMaps": true,
+    "requires8sVisitToLog": true,
+    "roomCap": 30
+  },
+  "unlockedByDefault": true
+}

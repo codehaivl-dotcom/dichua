@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "description": "Verifiable authentic Buddhist works, not fortune card content. All content requires separate text and audio rights clearance.",
+  "integrationRule": "SOURCE_ONLY entries open official sources; do not rehost, embed or synthesize unlicensed translations/recordings.",
+  "rightsGate": {
+    "localAudioMinimumForFullRelease": 2,
+    "requiredFieldsForLocalAudio": [
+      "audioAssetPath",
+      "audioAssetSha256",
+      "rightsReceipt",
+      "narratorAttribution",
+      "textEditionId"
+    ],
+    "allowExternalOnlyWhilePending": true
+  },
+  "sutras": [
+    {
+      "id": "SUTRA_HEART",
+      "titleVi": "Bát Nhã Tâm Kinh",
+      "titleOriginal": "Prajñāpāramitāhṛdayasūtra",
+      "canon": "Heart Sutra",
+      "tradition": "Mahayana",
+      "language": "vi",
+      "textSourceUrl": "https://vi.wikisource.org/wiki/B%C3%A1t-nh%C3%A3_ba-la-m%E1%BA%ADt-%C4%91a_t%C3%A2m_kinh",
+      "textAttribution": "Trần Trọng Kim (dịch), Wikisource",
+      "textStatus": "RIGHTS_REVIEW",
+      "audioStatus": "NO_LICENSED_AUDIO",
+      "audioSourceUrl": null,
+      "audioAttribution": null,
+      "notes": "Verify publication edition and public-domain status in target jurisdictions. Once cleared, create own licensed Vietnamese narration."
+    },
+    {
+      "id": "SUTRA_METTA",
+      "titleVi": "Kinh Từ Bi",
+      "titleOriginal": "Karaṇīya Mettā Sutta",
+      "canon": "Snp 1.8",
+      "tradition": "Early Buddhism / Pali",
+      "language": "vi",
+      "paliReferenceUrl": "https://suttacentral.net/snp1.8/pli/ms",
+      "textSourceUrl": "https://www.chuagiacngo.com/kinh-phat-can-ban/09-kinh-tu-bi",
+      "textAttribution": "Thích Nhật Từ (soạn dịch) theo trang Chùa Giác Ngộ",
+      "textStatus": "SOURCE_ONLY",
+      "audioStatus": "OFFICIAL_EXTERNAL_LINK",
+      "audioSourceUrl": "https://www.chuagiacngo.com/kinh-phat-can-ban/09-kinh-tu-bi",
+      "audioAttribution": "Giác Diệu Thanh, Chùa Giác Ngộ (theo trang nguồn)",
+      "notes": "Link to official recording, not a license for local audio or embeds."
+    },
+    {
+      "id": "SUTRA_MANGALA",
+      "titleVi": "Kinh Phước Đức",
+      "titleOriginal": "Maṅgala Sutta",
+      "canon": "Snp 2.4",
+      "tradition": "Early Buddhism / Pali",
+      "language": "vi",
+      "paliReferenceUrl": "https://suttacentral.net/snp2.4/pli/ms",
+      "textSourceUrl": "https://www.chuagiacngo.com/kinh-phat-ve-dao-duc-va-xa-hoi/8-kinh-phuoc-duc",
+      "textAttribution": "Thích Nhật Từ (theo trang Chùa Giác Ngộ)",
+      "textStatus": "SOURCE_ONLY",
+      "audioStatus": "OFFICIAL_EXTERNAL_LINK",
+      "audioSourceUrl": "https://www.chuagiacngo.com/kinh-phat-ve-dao-duc-va-xa-hoi/8-kinh-phuoc-duc",
+      "audioAttribution": "Thanh Thuyết, Chùa Giác Ngộ (theo trang nguồn)",
+      "notes": "Official web listening only until separate recording/translation permissions obtained."
+    },
+    {
+      "id": "SUTRA_DHAMMAPADA",
+      "titleVi": "Kinh Pháp Cú",
+      "titleOriginal": "Dhammapada",
+      "canon": "Dhp (select verses only after edition check)",
+      "tradition": "Early Buddhism / Pali",
+      "language": "vi",
+      "paliReferenceUrl": "https://suttacentral.net/dhp1-20/pli/ms",
+      "textSourceUrl": "https://suttacentral.net/",
+      "textAttribution": "Vietnamese edition/translator PENDING",
+      "textStatus": "RIGHTS_REVIEW",
+      "audioStatus": "NO_LICENSED_AUDIO",
+      "audioSourceUrl": null,
+      "audioAttribution": null,
+      "notes": "Choose specific actual verses and verified VI translation, no placeholder rebranded as scripture."
+    },
+    {
+      "id": "SUTRA_DHAMMACAKKA",
+      "titleVi": "Kinh Chuyển Pháp Luân",
+      "titleOriginal": "Dhammacakkappavattana Sutta",
+      "canon": "SN 56.11",
+      "tradition": "Early Buddhism / Pali",
+      "language": "vi",
+      "paliReferenceUrl": "https://suttacentral.net/sn56.11/pli/ms",
+      "textSourceUrl": "https://www.chuagiacngo.com/en/node/100366",
+      "textAttribution": "Vietnamese edition displayed by Chùa Giác Ngộ, exact translator to verify",
+      "textStatus": "SOURCE_ONLY",
+      "audioStatus": "OFFICIAL_EXTERNAL_LINK",
+      "audioSourceUrl": "https://www.chuagiacngo.com/en/node/100366",
+      "audioAttribution": "Chùa Giác Ngộ official album, track 02",
+      "notes": "Link album official; don't assume reuse permission."
+    }
+  ]
+}

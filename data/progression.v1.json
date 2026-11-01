@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "uiName": "Điểm trải nghiệm",
+  "spiritualRealityDisclaimer": "Điểm chỉ tồn tại trong game, không đánh giá công đức thật.",
+  "thresholds": [
+    0,
+    20,
+    50,
+    90,
+    140,
+    200
+  ],
+  "levelNames": [
+    "Khách Ghé Thăm",
+    "Người Khám Phá",
+    "Người Bạn Đồng Hành",
+    "Người Giữ Kỷ Niệm",
+    "Bạn Của Ngôi Chùa",
+    "Khách Thân Quen"
+  ],
+  "rules": [
+    {
+      "id": "firstVisitMap",
+      "points": 10,
+      "frequency": "oncePerMap"
+    },
+    {
+      "id": "firstDistinctMinigame",
+      "points": 4,
+      "activityIds": [
+        "soloOracle",
+        "pairOracle",
+        "starOffering",
+        "cutTies",
+        "PR_XAM"
+      ],
+      "frequency": "oncePerActivity"
+    },
+    {
+      "id": "firstViewpoint",
+      "points": 2,
+      "frequency": "oncePerMap"
+    },
+    {
+      "id": "onboardingStep",
+      "points": 2,
+      "frequency": "oncePerStep"
+    },
+    {
+      "id": "communityEvent",
+      "points": 3,
+      "frequency": "oncePerDay",
+      "minAttendanceSeconds": 30
+    },
+    {
+      "id": "mutualCoop",
+      "points": 4,
+      "frequency": "oncePerDay"
+    }
+  ],
+  "neverAwardFor": [
+    "beadCount",
+    "bowCount",
+    "chantDuration",
+    "prayerContent",
+    "realMoney",
+    "fortuneQuality",
+    "reportOrBlock"
+  ],
+  "rankings": {
+    "enabled": true,
+    "optInDefault": false,
+    "visibility": "MUTUAL_FRIENDS_ONLY",
+    "weeklyPointsCap": 30,
+    "excludePrivateReligiousEvents": true
+  },
+  "progressionOptional": true
+}
