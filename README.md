@@ -24,3 +24,8 @@ A 3D third-person Vietnamese multiplayer **social game** combining the online-te
 Exact config/data: [temple practices](data/temple-practices.v3.json), [sutra catalog](data/sutras.v1.json), [xăm](data/xam.v1.json), [pilgrimages](data/pilgrimage.v1.json), [events](data/events.v1.json), [progression](data/progression.v1.json), plus [social activities](data/activities.v1.json), [world](data/zones.v1.json), [fortune](data/fortune.v1.json).
 
 **Important audio status:** existing recordings on Chùa Giác Ngộ website are publicly listenable but **do not grant a license to embed/rehost MP3 in the game**. Agent must provide official listening links first; ship in-game playback only after written rights/public-domain evidence and a real recorded or licensed TTS file. Fortune/xăm and folklore rituals are entertainment, distinct from actual Buddhist scripture. All forms of actual worship are free; no spiritual superiority score.
+
+## Hội Quẻ Lạ & Duyên Tình Cờ (2026-11-02)
+- [Mini-game gieo quẻ lạ / quẻ hiếm / global tùy chọn / bạn cùng tần số](docs/17-QUE-LA-DUYEN-TINH-CO.md)
+- [32 lời quẻ hài, 8 sao giả tưởng, 9 lời quẻ đôi](data/folk-fun.v1.json)
+- Chỉ có spec + data; chưa code hoặc xác minh API Spawn cho global/nearby.

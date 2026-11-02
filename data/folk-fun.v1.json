@@ -1,0 +1,395 @@
+{
+  "schemaVersion": 1,
+  "description": "Comedic Vietnamese folk fortune mini-games for Spawn temple social world; not Buddhist doctrine",
+  "status": "SPEC_AND_DATA_ONLY_NOT_CODED",
+  "rights": "GAME_AUTHORED_FICTION",
+  "mainZone": "Z_LOVE",
+  "secondaryZone": "Z_FOLK",
+  "quietZone": "Z_HALL",
+  "anchors": {
+    "solo": "ORACLE_SOLO",
+    "pair": "ORACLE_PAIR",
+    "stars": "STAR_PAVILION"
+  },
+  "rarityWeightsPercent": {
+    "THUONG": 72,
+    "VUI": 22,
+    "HIEM": 5,
+    "HUYEN_THOAI": 1
+  },
+  "draw": {
+    "tokens": 3,
+    "revealMs": 2200,
+    "cooldownMs": 60000,
+    "source": "SERVER_WEIGHTED_TIER_THEN_UNIFORM_CARD",
+    "idempotent": true,
+    "paidReroll": false
+  },
+  "social": {
+    "optInDefault": false,
+    "eligibilityExpiryMs": 300000,
+    "radiusMeters": 16,
+    "maxPrivateSuggestions": 3,
+    "allowedSymbols": [
+      "SEN",
+      "CHUONG",
+      "TRA"
+    ],
+    "inviteTimeoutMs": 30000,
+    "maxInvitesPerMinute": 3,
+    "requiresMutualConsent": true,
+    "noBirthdateOrIdentityMatching": true,
+    "share": {
+      "rareTiers": [
+        "HIEM",
+        "HUYEN_THOAI"
+      ],
+      "confirmEachTime": true,
+      "perUserCooldownMs": 86400000,
+      "serverCooldownMs": 300000,
+      "neverRevealOtherNames": true,
+      "spawnApi": "PENDING_SPAWN_API"
+    }
+  },
+  "cards": [
+    {
+      "id": "Q1_01",
+      "tier": "THUONG",
+      "title": "Tin Nhắn Chưa Gửi",
+      "line": "Bàn phím chuẩn bị bấm chào, bộ não đã triệu tập họp khẩn.",
+      "reaction": "Thử chào một người bằng một câu đơn giản."
+    },
+    {
+      "id": "Q1_02",
+      "tier": "THUONG",
+      "title": "Quý Nhân Uống Trà",
+      "line": "Quý nhân đang ở gần, nhưng có thể còn bận pha trà.",
+      "reaction": "Ghé quán trà và hỏi chuyện nhẹ nhàng."
+    },
+    {
+      "id": "Q1_03",
+      "tier": "THUONG",
+      "title": "Đèn Xanh",
+      "line": "Đường nhân duyên không tắc; đang chờ đèn xanh đúng luật.",
+      "reaction": "Đi thêm một vòng sân chùa."
+    },
+    {
+      "id": "Q1_04",
+      "tier": "THUONG",
+      "title": "Mở Lời",
+      "line": "Trong 72 cách bắt chuyện, cách đầu vẫn là xin chào.",
+      "reaction": "Dùng emote chào."
+    },
+    {
+      "id": "Q1_05",
+      "tier": "THUONG",
+      "title": "Sóng Yếu",
+      "line": "Tín hiệu đã có, Wi-Fi ông Tơ hơi chập chờn.",
+      "reaction": "Thử một lời mời lịch sự."
+    },
+    {
+      "id": "Q1_06",
+      "tier": "THUONG",
+      "title": "Mất Dép",
+      "line": "Đôi khi gặp bạn tốt lúc đang tìm dép mình để đâu.",
+      "reaction": "Kể một kỷ niệm đi chùa vui."
+    },
+    {
+      "id": "Q1_07",
+      "tier": "THUONG",
+      "title": "Đĩa Rau",
+      "line": "Drama có thể cay, rau luộc thì vẫn lành.",
+      "reaction": "Hỏi bạn món chay yêu thích."
+    },
+    {
+      "id": "Q1_08",
+      "tier": "THUONG",
+      "title": "Gió Mát",
+      "line": "Gió đưa mây qua sân, còn chuyện mai cứ để mai.",
+      "reaction": "Ngắm cây đa một lát."
+    },
+    {
+      "id": "Q1_09",
+      "tier": "THUONG",
+      "title": "Chuyện Nhỏ",
+      "line": "Chuyện lớn hãy để sau; chuyện nhỏ là hôm nay vui không.",
+      "reaction": "Hỏi người bên cạnh một chuyện dễ thương."
+    },
+    {
+      "id": "Q1_10",
+      "tier": "THUONG",
+      "title": "Đi Dạo",
+      "line": "Một vòng sân chùa có thể mở ra câu chuyện mới.",
+      "reaction": "Ghé một góc chưa tới."
+    },
+    {
+      "id": "Q1_11",
+      "tier": "THUONG",
+      "title": "Lá Rơi",
+      "line": "Lá rơi vì đến mùa, không phải vũ trụ nhắn riêng bạn.",
+      "reaction": "Thưởng thức cảnh lá rơi."
+    },
+    {
+      "id": "Q1_12",
+      "tier": "THUONG",
+      "title": "Đổi Chỗ",
+      "line": "Ngồi ghế khác không đổi số mệnh, nhưng đổi góc nhìn.",
+      "reaction": "Thử một chỗ ngồi khác."
+    },
+    {
+      "id": "Q1_13",
+      "tier": "THUONG",
+      "title": "Thở Nhẹ",
+      "line": "Tâm bình như nước, trừ khi thấy 99+ thông báo.",
+      "reaction": "Ngắm hồ sen, tắt thông báo."
+    },
+    {
+      "id": "Q1_14",
+      "tier": "THUONG",
+      "title": "Chum Nước",
+      "line": "Chum đầy nhờ giọt nhỏ, tình bạn cũng vậy.",
+      "reaction": "Gửi lời cảm ơn một người."
+    },
+    {
+      "id": "Q1_15",
+      "tier": "THUONG",
+      "title": "Mưa Ngang",
+      "line": "Kế hoạch có thể ướt nhưng chuyện kể vẫn khô hài.",
+      "reaction": "Kể một lần gặp mưa."
+    },
+    {
+      "id": "Q1_16",
+      "tier": "THUONG",
+      "title": "Đúng Giờ",
+      "line": "Duyên chưa rõ nhưng giờ uống trà đã tới.",
+      "reaction": "Ghé quán trà của chùa."
+    },
+    {
+      "id": "Q2_01",
+      "tier": "VUI",
+      "title": "Ông Tơ Nghỉ Trưa",
+      "line": "Ông Tơ đã nhận hồ sơ. Vui lòng không gọi vào giờ ngủ trưa.",
+      "reaction": "Mời một bạn thử quẻ đôi."
+    },
+    {
+      "id": "Q2_02",
+      "tier": "VUI",
+      "title": "Tim Có GPS",
+      "line": "Tim bật định vị nhưng chưa chọn đích đến.",
+      "reaction": "Chọn Sen, Chuông hoặc Trà."
+    },
+    {
+      "id": "Q2_03",
+      "tier": "VUI",
+      "title": "Nút Gửi",
+      "line": "Gõ thật dài rồi xóa rất nhanh: bộ môn của người muốn mở lời.",
+      "reaction": "Thử chào ngắn thôi."
+    },
+    {
+      "id": "Q2_04",
+      "tier": "VUI",
+      "title": "Lỡ Vuốt",
+      "line": "Vuốt nhầm quẻ thì được, đừng vuốt người khác vào câu chuyện tình.",
+      "reaction": "Hỏi ý trước khi mời."
+    },
+    {
+      "id": "Q2_05",
+      "tier": "VUI",
+      "title": "Deadline",
+      "line": "Sao hạn đáng ngại nhất là deadline đang đi bộ về phía bạn.",
+      "reaction": "Kể một pha nước tới chân mới nhảy."
+    },
+    {
+      "id": "Q2_06",
+      "tier": "VUI",
+      "title": "Ngơ Ngác",
+      "line": "Có người gặp duyên lành, có người gặp bảng chỉ đường.",
+      "reaction": "Đi tìm một lối đi đẹp."
+    },
+    {
+      "id": "Q2_07",
+      "tier": "VUI",
+      "title": "Thính Không Đường",
+      "line": "Thả thính không đường nhưng vẫn có thể ngọt nếu cùng cười.",
+      "reaction": "Thử một câu chuyện hài."
+    },
+    {
+      "id": "Q2_08",
+      "tier": "VUI",
+      "title": "Thần Tài Tắc Đường",
+      "line": "Lộc đang đến, nhưng mắc xe chở bánh chưng.",
+      "reaction": "Bình tĩnh với những việc nhỏ."
+    },
+    {
+      "id": "Q3_01",
+      "tier": "HIEM",
+      "title": "Duyên Đi Đường Vòng",
+      "line": "Ông Tơ không đi lạc, chỉ đang tìm chỗ gửi xe.",
+      "reaction": "Khoe quẻ hoặc mời một bạn cùng chơi."
+    },
+    {
+      "id": "Q3_02",
+      "tier": "HIEM",
+      "title": "Quý Nhân Mời Trà",
+      "line": "Quý nhân không cưỡi mây, họ có thể ngồi quán trà bên trái.",
+      "reaction": "Rủ một người bạn uống trà."
+    },
+    {
+      "id": "Q3_03",
+      "tier": "HIEM",
+      "title": "Trăng Đúng Chỗ",
+      "line": "Không phải trăng rơi xuống, bạn chỉ nhìn đúng hướng.",
+      "reaction": "Chụp ảnh với người đồng ý."
+    },
+    {
+      "id": "Q3_04",
+      "tier": "HIEM",
+      "title": "Lộc Trên Trời",
+      "line": "Trời chưa gửi quà nhưng vừa gửi chuyện đáng kể.",
+      "reaction": "Khoe câu chuyện thay vì hỏi giá trị."
+    },
+    {
+      "id": "Q3_05",
+      "tier": "HIEM",
+      "title": "Hẹn Ở Hồ Sen",
+      "line": "Quẻ không chọn định mệnh, chỉ gợi một chỗ ngắm cảnh.",
+      "reaction": "Ra hồ sen nếu bạn thích."
+    },
+    {
+      "id": "Q3_06",
+      "tier": "HIEM",
+      "title": "Cười Chung Nhịp",
+      "line": "Không cần hợp mệnh, cùng cười chuyện vô lý là đã vui.",
+      "reaction": "Thử quẻ biểu tượng đôi."
+    },
+    {
+      "id": "Q4_01",
+      "tier": "HUYEN_THOAI",
+      "title": "Đào Hoa Nở Muộn",
+      "line": "Duyên chưa tới không phải do ế; GPS của ông Tơ đang cập nhật bản đồ.",
+      "reaction": "Lưu khoảnh khắc quẻ huyền thoại."
+    },
+    {
+      "id": "Q4_02",
+      "tier": "HUYEN_THOAI",
+      "title": "Trăm Năm Một Nụ Cười",
+      "line": "Hôm nay vũ trụ trúng số... nụ cười của bạn. Phần thưởng là chuyện kể vui.",
+      "reaction": "Mời ai đó trò chuyện, không phải hứa hẹn yêu đương."
+    }
+  ],
+  "stars": [
+    {
+      "id": "STAR_FUN_1",
+      "title": "Sao Tin Nhắn",
+      "line": "Một chấm sáng hiện lên, chắc ai đó vừa nhắn 'ngủ chưa?'.",
+      "fictional": true
+    },
+    {
+      "id": "STAR_FUN_2",
+      "title": "Sao Deadline",
+      "line": "Hạn này nằm trong lịch làm việc, không phải trên trời.",
+      "fictional": true
+    },
+    {
+      "id": "STAR_FUN_3",
+      "title": "Sao Mời Trà",
+      "line": "Quý nhân hôm nay có thể chỉ đang cầm ấm trà.",
+      "fictional": true
+    },
+    {
+      "id": "STAR_FUN_4",
+      "title": "Sao Ông Tơ Đường Vòng",
+      "line": "Chỉ đỏ chưa đứt; đang đi vòng quanh cây đa.",
+      "fictional": true
+    },
+    {
+      "id": "STAR_FUN_5",
+      "title": "Sao Gió Mát",
+      "line": "Hạn nóng nảy gặp gió mát rồi tự hạ nhiệt.",
+      "fictional": true
+    },
+    {
+      "id": "STAR_FUN_6",
+      "title": "Sao Bạn Hiền",
+      "line": "Quý nhân không có chữ trên đầu, nhưng biết lắng nghe.",
+      "fictional": true
+    },
+    {
+      "id": "STAR_FUN_7",
+      "title": "Sao Lộc Đến Chậm",
+      "line": "Lộc không mất; chưa tìm được đường vào bản đồ 3D.",
+      "fictional": true
+    },
+    {
+      "id": "STAR_FUN_8",
+      "title": "Sao Thở Phào",
+      "line": "Đèn sao sáng. Việc đầu tiên là thở phào nhẹ nhõm.",
+      "fictional": true
+    }
+  ],
+  "pairOutcomes": [
+    {
+      "id": "PAIR_1",
+      "playerA": "SEN",
+      "playerB": "SEN",
+      "title": "Sen và Sen",
+      "line": "Hai người cùng chọn Sen: vui vì không cần nói nhiều."
+    },
+    {
+      "id": "PAIR_2",
+      "playerA": "SEN",
+      "playerB": "CHUONG",
+      "title": "Sen và Chuông",
+      "line": "Một người thích yên, một người thích vang: thử thay phiên kể."
+    },
+    {
+      "id": "PAIR_3",
+      "playerA": "SEN",
+      "playerB": "TRA",
+      "title": "Sen và Trà",
+      "line": "Một người ngắm cảnh, một người gọi trà: lịch trình đã có."
+    },
+    {
+      "id": "PAIR_4",
+      "playerA": "CHUONG",
+      "playerB": "SEN",
+      "title": "Chuông và Sen",
+      "line": "Chuông ngân một tiếng, Sen cười một cái."
+    },
+    {
+      "id": "PAIR_5",
+      "playerA": "CHUONG",
+      "playerB": "CHUONG",
+      "title": "Chuông và Chuông",
+      "line": "Hai tiếng chuông đồng loạt: nhớ giảm âm lượng câu chuyện cười."
+    },
+    {
+      "id": "PAIR_6",
+      "playerA": "CHUONG",
+      "playerB": "TRA",
+      "title": "Chuông và Trà",
+      "line": "Một người kể rôm rả, một người rót trà: khá hợp kể chuyện."
+    },
+    {
+      "id": "PAIR_7",
+      "playerA": "TRA",
+      "playerB": "SEN",
+      "title": "Trà và Sen",
+      "line": "Tách trà cạnh hồ sen: yên lặng cũng có thể vui."
+    },
+    {
+      "id": "PAIR_8",
+      "playerA": "TRA",
+      "playerB": "CHUONG",
+      "title": "Trà và Chuông",
+      "line": "Trà nóng cộng chuông ngân: đừng cười mạnh kẻo sặc."
+    },
+    {
+      "id": "PAIR_9",
+      "playerA": "TRA",
+      "playerB": "TRA",
+      "title": "Trà và Trà",
+      "line": "Hai người chọn Trà: quẻ gợi thêm một ấm, không phải đặt tên con."
+    }
+  ]
+}

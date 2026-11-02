@@ -16,3 +16,6 @@
 10. No secret, unlicensed asset, paid third-party API or recurring service without owner consent. Don't endlessly rewrite docs instead of coding.
 
 **Agent's immediate task:** implement Phase 0–1 runnable, documented by docs/14-V3-IMPLEMENTATION.md, then two-browser social; keep full V3 milestones as required scope.
+
+## Owner add-on, 2026-11-02
+Read docs/17-QUE-LA-DUYEN-TINH-CO.md and data/folk-fun.v1.json for the comedic folk mini-game extension. Reuse Spawn socials. Only opt-in rare announcements and opt-in nearby pair suggestions, not unconsented names or forced pairings. No gambling or comedy in the Buddhist main hall; no fake 'kinh'. All features remain UNIMPLEMENTED until tested inside Spawn.
