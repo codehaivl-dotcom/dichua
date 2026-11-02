@@ -175,6 +175,16 @@
         0,
         -36
       ]
+    },
+    {
+      "id": "NPC_LANH",
+      "zone": "Z_TEA",
+      "pos": [
+        -38,
+        0,
+        39
+      ],
+      "status": "PROPOSED_CONFIRM_IN_SPAWN_WORLD"
     }
   ],
   "anchors": [

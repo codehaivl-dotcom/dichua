@@ -32,3 +32,5 @@ Exact config/data: [temple practices](data/temple-practices.v3.json), [sutra cat
 
 ### V4 audit corrections (2026-11-02)
 Old quẻ vs folk fun activities now use separate anchors/pools; 6 short optional minigames in folk-fun data; opt-in symbol selected once; original 8 stars retained. See [docs/17](docs/17-QUE-LA-DUYEN-TINH-CO.md), [Spawn architecture](docs/06-TECH.md), and [updated delivery](docs/09-DELIVERY.md). API existence and runtime gameplay remain UNVERIFIED.
+
+**Run data validator:** `node scripts/validate-folk-fun.mjs` (checks data only; no Spawn runtime involved).

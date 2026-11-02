@@ -5,7 +5,6 @@
     "pairOracle",
     "folkFunSolo",
     "soloOracle",
-    "folkFunStars",
     "cutTies",
     "starOffering",
     "incense",
@@ -215,7 +214,9 @@
         "ALIGN_EXISTING_STAR",
         "SHOW_FICTIONAL_RESULT"
       ],
-      "note": "DO NOT CREATE NEW SOCKETS OR REPLACE EXISTING INTENTION CATEGORIES"
+      "note": "DO NOT CREATE NEW SOCKETS OR REPLACE EXISTING INTENTION CATEGORIES",
+      "dispatch": "EXPLICIT_MODE_SELECTOR_INSIDE_EXISTING_STAR_PAVILION",
+      "automaticInteraction": false
     }
   ],
   "social": {

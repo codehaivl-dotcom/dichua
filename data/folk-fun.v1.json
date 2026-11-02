@@ -3,8 +3,8 @@
   "description": "Comedic Vietnamese folk fortune mini-games for Spawn temple social world; not Buddhist doctrine",
   "status": "V4_SPEC_AND_DATA_VALIDATED_NOT_RUNTIME_IMPLEMENTED",
   "rights": "GAME_AUTHORED_FICTION",
-  "mainZone": "Z_LOVE",
-  "secondaryZone": "Z_FOLK",
+  "mainZone": "Z_FOLK",
+  "secondaryZone": "Z_LOVE",
   "quietZone": "Z_HALL",
   "anchors": {
     "solo": "FUN_ORACLE_SOLO",
@@ -575,5 +575,13 @@
     "optionalMicroGameOnlyWhenAssigned": true,
     "neverRequireMicroGameForShare": true,
     "notMoreThanOneMicroGamePerDraw": true
+  },
+  "microGameAccess": {
+    "postCardOffer": true,
+    "directPlayFromFolkBoard": true,
+    "directPlayCooldownMs": 60000,
+    "noRarityOrRewardsOnDirectPlay": true,
+    "showAllSixChoices": true,
+    "allowCancelWithoutPenalty": true
   }
 }
