@@ -329,6 +329,54 @@
         -27
       ],
       "range": 1.5
+    },
+    {
+      "id": "FUN_ORACLE_SOLO",
+      "zone": "Z_FOLK",
+      "pos": [
+        -33,
+        0,
+        -3
+      ],
+      "range": 1.8,
+      "assetIntent": "fictional fortune kiosk",
+      "status": "PROPOSED_CONFIRM_IN_SPAWN_WORLD"
+    },
+    {
+      "id": "FUN_ORACLE_PAIR",
+      "zone": "Z_FOLK",
+      "pos": [
+        -34,
+        0,
+        -25
+      ],
+      "range": 2,
+      "partnerPads": [
+        [
+          -35.5,
+          0,
+          -26.5
+        ],
+        [
+          -32.5,
+          0,
+          -26.5
+        ]
+      ],
+      "assetIntent": "two player folklore station",
+      "status": "PROPOSED_CONFIRM_IN_SPAWN_WORLD"
+    },
+    {
+      "id": "FUN_GATHERING",
+      "zone": "Z_FOLK",
+      "pos": [
+        -32,
+        0,
+        -14
+      ],
+      "range": 3,
+      "assetIntent": "opt-in gathering point for private suggestions",
+      "status": "PROPOSED_CONFIRM_IN_SPAWN_WORLD"
     }
   ],
   "seatLayout": {

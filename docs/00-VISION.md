@@ -9,7 +9,7 @@
 
 ## Full required scope, phased release
 - One main fully detailed pagoda **CHUA_SEN** plus two **genuinely traversable networked** satellites CHUA_TRUC and CHUA_MAY. Scene/maps are fictional Vietnamese pagodas; no impersonation of actual monastery.
-- Web desktop/mobile, third-person camera, 4 avatar variants, server authoritative WS rooms (start 30 players per room), guest session persistence, journal and safety.
+- Spawn desktop/mobile, third-person camera, 4 wardrobe variants, Spawn-native network/party/room services (initial 30-player target subject to load evidence), game journal and safety.
 - 4 original folklore minigames, 10 additional temple practice systems, 5 verified authentic sutra references; **2 legally cleared playable Vietnamese audio files in game** required to call full release complete.
 - Four opt-in events: shared mala, bows, lanterns, sutra listening (only cleared audio), server schedule in Asia/Ho_Chi_Minh, no fake participants.
 - Game XP points from **exploration/cooperation only**; six cosmetic levels, optional friends leaderboard off by default. No scoring speed/frequency of genuine prayer, meditation, lạy or personal spirituality.
@@ -18,4 +18,4 @@
 Phase 0–1 = prototype, phase 2–3 social/folk gameplay, phase 4–5 polished & safety, phase 6 temple practice, phase 7 authentic audio/player with rights, phase 8 map/event/progression. Full V3 requires all acceptance in docs/08 and docs/13. A rights-pending audio source hyperlink is NOT full in-game playback. Do not mark done based on spec files.
 
 ## Guardrails
-Users are adults for social gameplay; all social encounters voluntary, block/mute/report required. Private wishes private by default, public custom messages moderated first. No claims of healing, exorcism, real divination success, temple endorsement, or purchased “công đức”. Actual sutras identified, attributed and licensed separately from game-created quẻ.
+Spawn-native player safety applies without a separate in-game 18+ gate; restrict risky social interactions if youth safeguards cannot be verified. All social encounters voluntary; block/mute/report required. Private wishes private by default, public custom messages moderated first. No claims of healing, exorcism, real divination success, temple endorsement, or purchased “công đức”. Actual sutras identified, attributed and licensed separately from game-created quẻ.

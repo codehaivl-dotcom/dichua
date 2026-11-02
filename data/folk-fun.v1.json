@@ -1,14 +1,15 @@
 {
   "schemaVersion": 1,
   "description": "Comedic Vietnamese folk fortune mini-games for Spawn temple social world; not Buddhist doctrine",
-  "status": "SPEC_AND_DATA_ONLY_NOT_CODED",
+  "status": "V4_SPEC_AND_DATA_VALIDATED_NOT_RUNTIME_IMPLEMENTED",
   "rights": "GAME_AUTHORED_FICTION",
   "mainZone": "Z_LOVE",
   "secondaryZone": "Z_FOLK",
   "quietZone": "Z_HALL",
   "anchors": {
-    "solo": "ORACLE_SOLO",
-    "pair": "ORACLE_PAIR",
+    "solo": "FUN_ORACLE_SOLO",
+    "pair": "FUN_ORACLE_PAIR",
+    "gathering": "FUN_GATHERING",
     "stars": "STAR_PAVILION"
   },
   "rarityWeightsPercent": {
@@ -48,8 +49,34 @@
       "perUserCooldownMs": 86400000,
       "serverCooldownMs": 300000,
       "neverRevealOtherNames": true,
-      "spawnApi": "PENDING_SPAWN_API"
-    }
+      "spawnApi": "PENDING_SPAWN_API",
+      "deliveryScope": "SPAWN_GLOBAL_IF_VERIFIED_ELSE_ROOM_OR_FRIEND_SHARE",
+      "quietHallSuppressionRequired": true,
+      "failureMode": "DO_NOT_BROADCAST_IF_QUIET_ZONE_SUPPRESSION_MISSING",
+      "noGlobalIfPrivacyConsentMissing": true,
+      "userLabelSource": "SPAWN_IDENTITY_ONLY",
+      "serverCapScope": "EXACT_RUNTIME_SCOPE_PENDING_VERIFICATION"
+    },
+    "selectionMode": "CHOOSE_ICON_ONCE_AT_OPT_IN_REUSE_FOR_PAIR_RESULT",
+    "allowedCandidateZones": [
+      "Z_FOLK",
+      "Z_LOVE",
+      "Z_TEA",
+      "Z_COURTYARD"
+    ],
+    "eligibilityRules": {
+      "mustBeRealPlayer": true,
+      "mustOptIn": true,
+      "notBlocked": true,
+      "notAFK": true,
+      "notBusyInRitual": true,
+      "sameRoomPlace": true,
+      "maxDistanceMeters": 16,
+      "neverDiscoverInsideHall": true,
+      "selection": "matchingSymbolFirst_then_randomTieBreak",
+      "requiresSpawnConfirmedAPI": true
+    },
+    "noCandidatesCopy": "Ông Tơ đang kiểm tra sóng Wi-Fi. Chưa có bạn nào bật thử quẻ gần đây."
   },
   "cards": [
     {
@@ -64,21 +91,22 @@
       "tier": "THUONG",
       "title": "Quý Nhân Uống Trà",
       "line": "Quý nhân đang ở gần, nhưng có thể còn bận pha trà.",
-      "reaction": "Ghé quán trà và hỏi chuyện nhẹ nhàng."
+      "reaction": "Ghé quán trà và hỏi chuyện nhẹ nhàng.",
+      "microGameId": "M06_BUDDY_TEA"
     },
     {
       "id": "Q1_03",
       "tier": "THUONG",
       "title": "Đèn Xanh",
-      "line": "Đường nhân duyên không tắc; đang chờ đèn xanh đúng luật.",
-      "reaction": "Đi thêm một vòng sân chùa."
+      "line": "Đường tình duyên chẳng tắc đâu. Đang dừng đèn đỏ đúng luật, ai giục thì xin xuất trình giấy phép.",
+      "reaction": "Vừa đi vừa ngắm chùa, đừng vượt đèn đỏ của lòng mình."
     },
     {
       "id": "Q1_04",
       "tier": "THUONG",
       "title": "Mở Lời",
-      "line": "Trong 72 cách bắt chuyện, cách đầu vẫn là xin chào.",
-      "reaction": "Dùng emote chào."
+      "line": "Bảy mươi hai cách thả thính đã được nghiên cứu. Kết quả: chữ “chào” vẫn chưa hết hạn sử dụng.",
+      "reaction": "Bấm chào, không cần đọc diễn văn."
     },
     {
       "id": "Q1_05",
@@ -92,14 +120,15 @@
       "tier": "THUONG",
       "title": "Mất Dép",
       "line": "Đôi khi gặp bạn tốt lúc đang tìm dép mình để đâu.",
-      "reaction": "Kể một kỷ niệm đi chùa vui."
+      "reaction": "Kể một kỷ niệm đi chùa vui.",
+      "microGameId": "M01_FIND_SANDALS"
     },
     {
       "id": "Q1_07",
       "tier": "THUONG",
       "title": "Đĩa Rau",
-      "line": "Drama có thể cay, rau luộc thì vẫn lành.",
-      "reaction": "Hỏi bạn món chay yêu thích."
+      "line": "Drama cay hơn ớt, nhưng hôm nay vũ trụ chỉ phát miễn phí rau luộc.",
+      "reaction": "Hỏi bạn món chay nào ăn mãi không chán."
     },
     {
       "id": "Q1_08",
@@ -112,36 +141,36 @@
       "id": "Q1_09",
       "tier": "THUONG",
       "title": "Chuyện Nhỏ",
-      "line": "Chuyện lớn hãy để sau; chuyện nhỏ là hôm nay vui không.",
-      "reaction": "Hỏi người bên cạnh một chuyện dễ thương."
+      "line": "Bạn định hỏi chuyện trăm năm, quẻ xin hỏi trước: hôm nay đã uống đủ nước chưa?",
+      "reaction": "Mở đầu bằng chuyện thật nhỏ."
     },
     {
       "id": "Q1_10",
       "tier": "THUONG",
       "title": "Đi Dạo",
-      "line": "Một vòng sân chùa có thể mở ra câu chuyện mới.",
+      "line": "Đi hết một vòng sân chùa mà vẫn chưa gặp duyên? Ít nhất đồng hồ đã nhận đủ bước chân.",
       "reaction": "Ghé một góc chưa tới."
     },
     {
       "id": "Q1_11",
       "tier": "THUONG",
       "title": "Lá Rơi",
-      "line": "Lá rơi vì đến mùa, không phải vũ trụ nhắn riêng bạn.",
-      "reaction": "Thưởng thức cảnh lá rơi."
+      "line": "Một chiếc lá rơi. Hội đồng bói toán họp khẩn. Kết luận: gió thổi.",
+      "reaction": "Ngắm cảnh, đừng bắt lá làm thầy bói."
     },
     {
       "id": "Q1_12",
       "tier": "THUONG",
       "title": "Đổi Chỗ",
-      "line": "Ngồi ghế khác không đổi số mệnh, nhưng đổi góc nhìn.",
-      "reaction": "Thử một chỗ ngồi khác."
+      "line": "Bạn chuyển sang ghế khác. Duyên chưa chuyển, nhưng view hồ sen lên hạng nhất.",
+      "reaction": "Thử góc nhìn mới."
     },
     {
       "id": "Q1_13",
       "tier": "THUONG",
       "title": "Thở Nhẹ",
-      "line": "Tâm bình như nước, trừ khi thấy 99+ thông báo.",
-      "reaction": "Ngắm hồ sen, tắt thông báo."
+      "line": "Tâm bình như mặt hồ, cho đến khi thấy thông báo “đã xem”.",
+      "reaction": "Tắt thông báo và thở nhẹ."
     },
     {
       "id": "Q1_14",
@@ -154,36 +183,38 @@
       "id": "Q1_15",
       "tier": "THUONG",
       "title": "Mưa Ngang",
-      "line": "Kế hoạch có thể ướt nhưng chuyện kể vẫn khô hài.",
-      "reaction": "Kể một lần gặp mưa."
+      "line": "Trời đổ mưa ngay khi bạn vừa chải tóc. Thiên cơ bất khả lộ, thời tiết thì có dự báo.",
+      "reaction": "Kể một chuyến đi gặp mưa."
     },
     {
       "id": "Q1_16",
       "tier": "THUONG",
       "title": "Đúng Giờ",
-      "line": "Duyên chưa rõ nhưng giờ uống trà đã tới.",
-      "reaction": "Ghé quán trà của chùa."
+      "line": "Ông Tơ chưa hẹn ngày. Bà bán trà đã hẹn: uống ngay kẻo nguội.",
+      "reaction": "Ra quán trà ngắm người qua lại."
     },
     {
       "id": "Q2_01",
       "tier": "VUI",
       "title": "Ông Tơ Nghỉ Trưa",
       "line": "Ông Tơ đã nhận hồ sơ. Vui lòng không gọi vào giờ ngủ trưa.",
-      "reaction": "Mời một bạn thử quẻ đôi."
+      "reaction": "Mời một bạn thử quẻ đôi.",
+      "microGameId": "M03_ONG_TO_GPS"
     },
     {
       "id": "Q2_02",
       "tier": "VUI",
       "title": "Tim Có GPS",
       "line": "Tim bật định vị nhưng chưa chọn đích đến.",
-      "reaction": "Chọn Sen, Chuông hoặc Trà."
+      "reaction": "Chọn Sen, Chuông hoặc Trà.",
+      "microGameId": "M05_LOTUS_MEMORY"
     },
     {
       "id": "Q2_03",
       "tier": "VUI",
       "title": "Nút Gửi",
-      "line": "Gõ thật dài rồi xóa rất nhanh: bộ môn của người muốn mở lời.",
-      "reaction": "Thử chào ngắn thôi."
+      "line": "Bạn gõ ba đoạn văn, xóa hết, rồi gửi đúng một dấu chấm. Đó không phải bí thuật, đó là hồi hộp.",
+      "reaction": "Thử gửi một lời chào ngắn."
     },
     {
       "id": "Q2_04",
@@ -196,8 +227,8 @@
       "id": "Q2_05",
       "tier": "VUI",
       "title": "Deadline",
-      "line": "Sao hạn đáng ngại nhất là deadline đang đi bộ về phía bạn.",
-      "reaction": "Kể một pha nước tới chân mới nhảy."
+      "line": "Sao hạn mạnh nhất tuần này không ở cung mệnh mà nằm trong mục việc phải làm.",
+      "reaction": "Chọn một việc nhỏ để xử lý."
     },
     {
       "id": "Q2_06",
@@ -211,7 +242,8 @@
       "tier": "VUI",
       "title": "Thính Không Đường",
       "line": "Thả thính không đường nhưng vẫn có thể ngọt nếu cùng cười.",
-      "reaction": "Thử một câu chuyện hài."
+      "reaction": "Thử một câu chuyện hài.",
+      "microGameId": "M06_BUDDY_TEA"
     },
     {
       "id": "Q2_08",
@@ -232,7 +264,8 @@
       "tier": "HIEM",
       "title": "Quý Nhân Mời Trà",
       "line": "Quý nhân không cưỡi mây, họ có thể ngồi quán trà bên trái.",
-      "reaction": "Rủ một người bạn uống trà."
+      "reaction": "Rủ một người bạn uống trà.",
+      "microGameId": "M02_TEA_ORDER"
     },
     {
       "id": "Q3_03",
@@ -245,8 +278,8 @@
       "id": "Q3_04",
       "tier": "HIEM",
       "title": "Lộc Trên Trời",
-      "line": "Trời chưa gửi quà nhưng vừa gửi chuyện đáng kể.",
-      "reaction": "Khoe câu chuyện thay vì hỏi giá trị."
+      "line": "Một cục lộc từ trên trời rơi xuống. May quá là tờ giấy ghi: nhớ ngủ đủ.",
+      "reaction": "Khoe quẻ, đừng kỳ vọng phép màu."
     },
     {
       "id": "Q3_05",
@@ -260,21 +293,23 @@
       "tier": "HIEM",
       "title": "Cười Chung Nhịp",
       "line": "Không cần hợp mệnh, cùng cười chuyện vô lý là đã vui.",
-      "reaction": "Thử quẻ biểu tượng đôi."
+      "reaction": "Thử quẻ biểu tượng đôi.",
+      "microGameId": "M04_ECHO_CHIME"
     },
     {
       "id": "Q4_01",
       "tier": "HUYEN_THOAI",
       "title": "Đào Hoa Nở Muộn",
       "line": "Duyên chưa tới không phải do ế; GPS của ông Tơ đang cập nhật bản đồ.",
-      "reaction": "Lưu khoảnh khắc quẻ huyền thoại."
+      "reaction": "Lưu khoảnh khắc quẻ huyền thoại.",
+      "microGameId": "M03_ONG_TO_GPS"
     },
     {
       "id": "Q4_02",
       "tier": "HUYEN_THOAI",
       "title": "Trăm Năm Một Nụ Cười",
-      "line": "Hôm nay vũ trụ trúng số... nụ cười của bạn. Phần thưởng là chuyện kể vui.",
-      "reaction": "Mời ai đó trò chuyện, không phải hứa hẹn yêu đương."
+      "line": "Quẻ huyền thoại phán: nụ cười của bạn hôm nay đã vượt chỉ tiêu công sở 300%.",
+      "reaction": "Mời một cuộc trò chuyện vui, không phải hứa chuyện trăm năm."
     }
   ],
   "stars": [
@@ -391,5 +426,154 @@
       "title": "Trà và Trà",
       "line": "Hai người chọn Trà: quẻ gợi thêm một ấm, không phải đặt tên con."
     }
-  ]
+  ],
+  "differentiation": {
+    "existingSolo": {
+      "id": "soloOracle",
+      "anchorId": "ORACLE_SOLO",
+      "pool": "fortune.v1.json:loveSolo"
+    },
+    "existingPair": {
+      "id": "pairOracle",
+      "anchorId": "ORACLE_PAIR",
+      "pool": "fortune.v1.json:pairLove"
+    },
+    "newSolo": {
+      "id": "folkFunSolo",
+      "anchorId": "FUN_ORACLE_SOLO",
+      "pool": "folk-fun.v1.json:cards"
+    },
+    "newPair": {
+      "id": "folkFunPair",
+      "anchorId": "FUN_ORACLE_PAIR",
+      "pool": "folk-fun.v1.json:pairOutcomes"
+    },
+    "newStars": {
+      "id": "folkFunStars",
+      "reuseOldEightSockets": true,
+      "existingGame": "starOffering",
+      "newSocketCount": 0
+    }
+  },
+  "microGames": [
+    {
+      "id": "M01_FIND_SANDALS",
+      "title": "Tìm Đôi Dép Lạc",
+      "triggerCardIds": [
+        "Q1_06"
+      ],
+      "type": "SOLO_SEARCH",
+      "zone": "Z_FOLK",
+      "durationSec": 40,
+      "spawnProps": [
+        [
+          -55,
+          0,
+          -7
+        ],
+        [
+          -50,
+          0,
+          -9
+        ],
+        [
+          -46,
+          0,
+          -5
+        ]
+      ],
+      "input": "click_or_tap_two_matching_sandals_among_six",
+      "win": "two matching sandal IDs selected",
+      "miss": "show gentle retry after timeout",
+      "maxAttempts": 2,
+      "optional": true,
+      "avoidReligiousAltar": true
+    },
+    {
+      "id": "M02_TEA_ORDER",
+      "title": "Pha Trà Cho Quý Nhân",
+      "triggerCardIds": [
+        "Q3_02"
+      ],
+      "type": "SOLO_SEQUENCE",
+      "zone": "Z_FOLK",
+      "durationSec": 35,
+      "input": "select_three_steps_theo_thu_tu:trang_am->cho_tra->rot_nuoc",
+      "win": "three ordered inputs match authored sequence",
+      "miss": "soft hint then reset",
+      "maxAttempts": 2,
+      "optional": true
+    },
+    {
+      "id": "M03_ONG_TO_GPS",
+      "title": "Chỉ Đường Cho Ông Tơ",
+      "triggerCardIds": [
+        "Q2_01",
+        "Q4_01"
+      ],
+      "type": "SOLO_PATH_PUZZLE",
+      "zone": "Z_FOLK",
+      "durationSec": 45,
+      "input": "rotate_three_map_arrows_until_route_connects_three_nodes",
+      "win": "all three arrow orientations form marked path",
+      "miss": "show map hint; no negative fortune",
+      "maxAttempts": 2,
+      "optional": true
+    },
+    {
+      "id": "M04_ECHO_CHIME",
+      "title": "Gõ Nhịp Ngẫu Hứng",
+      "triggerCardIds": [
+        "Q3_06"
+      ],
+      "type": "SOLO_PATTERN",
+      "zone": "Z_FOLK",
+      "durationSec": 30,
+      "input": "replay_four_note_sequence_on_small_wood_chimes",
+      "win": "four inputs match 4-note pattern; generous timing",
+      "miss": "repeat sequence once",
+      "maxAttempts": 2,
+      "optional": true,
+      "note": "folk toy chimes outside temple hall, NOT a merit score for actual ritual bell"
+    },
+    {
+      "id": "M05_LOTUS_MEMORY",
+      "title": "Ba Cánh Sen Bí Mật",
+      "triggerCardIds": [
+        "Q2_02"
+      ],
+      "type": "SOLO_MEMORY",
+      "zone": "Z_FOLK",
+      "durationSec": 30,
+      "input": "watch_3_lotus_lights_then_tap_matching_order",
+      "win": "correct three-object order",
+      "miss": "reveal pattern and permit replay",
+      "maxAttempts": 2,
+      "optional": true
+    },
+    {
+      "id": "M06_BUDDY_TEA",
+      "title": "Một Ấm Trà Hai Người",
+      "triggerCardIds": [
+        "Q1_02",
+        "Q2_07"
+      ],
+      "type": "OPTIONAL_PAIR_COOP",
+      "zone": "Z_TEA",
+      "durationSec": 45,
+      "input": "both_opt_in_then_each_performs_one_tea_pouring_step",
+      "win": "both consenting players complete step A and step B",
+      "miss": "cancel gracefully and offer solo tea card instead",
+      "maxAttempts": 1,
+      "optional": true,
+      "requiresMutualConsent": true,
+      "soloFallback": "SHOW_FUN_RESULT_ONLY"
+    }
+  ],
+  "cardPresentation": {
+    "alwaysShowResult": true,
+    "optionalMicroGameOnlyWhenAssigned": true,
+    "neverRequireMicroGameForShare": true,
+    "notMoreThanOneMicroGamePerDraw": true
+  }
 }

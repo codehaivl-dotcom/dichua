@@ -1,30 +1,25 @@
-# 03 — Social design, multiplayer, friendships
+# 03 — Spawn-native social game contract (OWNER V4, 2026-11-02)
 
-**Required playable feature set, not just future aspirations.**
+**Current production direction: reuse the Spawn player platform. Do not build an auth/chat/DM/friend/mute/block/report/network stack or generate Khách xxxx IDs.** This document supersedes the standalone social architecture in older specs. Capability details still require evidence from the actual Spawn runtime; do NOT invent endpoints.
 
-## Guest identity & persistence
-Entry without form; server mints opaque guest ID and generated public alias Khách + 4 alphanumerics, stores HttpOnly Secure SameSite cookie for 30 days on opt-in/appropriate notice. User picks from 4 avatars. Server has minimal guest DB record, no phone, birthday, face image or real identity. Unlinked guest friends available on same browser; show honest warning that clearing device storage can make the account unrecoverable. Optional proper cross-device email OTP sign-in is post-MVP. “Create account” must not block play.
+## Ownership
+- Spawn supplies account, displayName, appearance/wardrobe base, join/leave, existing chat/DM, mutual friends, party, block/report/mute, default menu, graphics/loading interface. Game never renames a player or asks for a separate login or 18+ gate.
+- Chùa game supplies map places, quiet-zone configuration, 16m nearby chat policy (via actual Spawn-supported method), interaction anchors, activity invitations, scripted results, private game journal and consent/preferences for folklore participation.
+- 3 chùa = 3 Spawn places; travel by place portal, friend join by available Spawn party/join APIs, not homegrown rooms or cookie auth. Initial target room population 30, actual platform caps/perf require verification.
 
-## Player interactions
-Tap/click on avatar (within <= 6m) -> context card with alias, status and menu: Chào, Chat gần, Mời uống trà, Mời xin quẻ đôi, Kết bạn / Chấp nhận, Chặn, Báo cáo. No forced follow, unsolicited physical contact or romance label. In-world emotes wave/bow/soft clap/point, cooldown 2s. Gender / marital assumptions forbidden.
+## User flow
+Spawn places character by tam quan with their Spawn name. Optional outfit cabinet at gate. Player walks, worships, reads/listens to real sutras with cleared rights, may join events. Optional social area permits chat and invited 2-person minigames. Never force chatting or dating to complete temple practices.
 
-## Proximity chat
-Only near players within 16m in same chat-permitted zone. Chat bubble fades after 6s. Max 160 grapheme characters, <=1 message/2s, <=10/min, no clickable links/HTML/markdown. Server normalizes Unicode, rejects harmful content/URLs and spam; text rendered safely as textContent. Public chat disabled inside Z_HALL with quiet-zone hint; no bubble over ritual shrine. Block/mute on either side suppresses delivery. “Ẩn chat” is prominent. No global public chat in MVP.
+## Social safeguards
+- Nearby text chat ideally 16m outdoors; chat bubbles and proximity controlled by supported Spawn feature. Z_HALL is a quiet space; chat/folk jokes/announcement effects suppressed there. If engine lacks zone suppression, this is a product blocker to resolve, not a reason to build another chat UI or silently allow loud notifications.
+- Reuse Spawn's mutual friend request, DM, decline, block/report/mute semantics; blocking MUST prevent invitations and shared result access. If Spawn cannot expose block state to game logic, do not enable nearby match suggestions until protected.
+- Pair invitations: player A chooses a visible, opted-in real player B; B explicitly accepts or declines within 30s, can block, both enter pads. No auto friendship, no auto romance, no fake NPC counted as human.
+- Consent to public friend/party photo by existing Spawn capability when available; screenshot save/export requires API inspection. Never automatically upload images.
 
-## Friendship state
-NONE -> REQUESTED -> ACCEPTED or DECLINED or EXPIRED; either side can BLOCK or REMOVE. Request accepted by recipient only; 7-day expiration; 10 requests/day/guest, max 3/min. Store pair keys in canonical sorted order; uniqueness avoids double friend rows. Invite notice shows alias + action, not private precise location. Accepted friends show “Đang online / Vắng mặt”; button to join their room only if online, not blocked and capacity permits. If full -> explanatory message, never displace player. Friend request does not automatically create romantic match.
+## Folk-fun privacy overlay (docs/17)
+- FUN_GATHERING opt-in default OFF. 5 minute automatic timeout. Choose one symbol SEN/CHUONG/TRA ONCE at opt-in, reused in `folkFunPair` result; no double-choice UI.
+- Eligible players: same Spawn room/place, <=16m, not in Z_HALL, not busy/AFK, not blocked, both opted in. Private shortlist 0–3; only A sees names when the exposed Spawn API grants this. Invitations via Spawn existing system; 3/min max. No B/C name in Global.
+- Rare quẻ share is never automatic. After explicit preview+confirmation, use supported Spawn announcement API only with verified rate limit, 24h/user and 5min/server. Otherwise support private or room share only if Spawn supports it and is quiet-zone safe. UNKNOWN = PENDING_SPAWN_API, not shipped.
 
-## DMs
-1:1 text only with mutual accepted friendship. Limit 500 grapheme chars, <=20 messages/min, 30-day retention; no images/files/URLs, no auto-notifying external platforms. Store sending and recipient guest IDs, timestamps, moderation flags. Report/block accessible next to each message. If blocked, no new delivery; old messages are hidden in UI (deletion policy in doc 07). No typing indicator or read receipts in MVP.
-
-## Shared activities
-Pair love oracle: request -> target accept -> both near two altar anchors -> both READY and choose -> server reveals SAME card -> exit/photo/friend. No acceptance = no start. 30s invite timeout. Walk >8m from altar, room leave or disconnect grace >8s cancels both. Tea invites up to 3 people per 4-seat table; seat held by server with 25s reservation then released. Photo: invite up to 3 nearby people; each opts into group pose, camera captures locally; remote player can disable capture representation in settings. Every invitation can be declined silently.
-
-## Multiplayer room model
-One authoritative world instance per room, initial max 30 authenticated guest sessions; max configurable 50 only after performance proof. Server 20Hz simulation, 10Hz snapshot, client input <=20Hz. Interest radius 35m+8m hysteresis. Client interpolate remote avatars 120ms; local prediction reconciles with server state. Dynamic world state seats, altars, active stars, pair activities on server only. Real player count = active server room members, never NPC or estimated. Disconnect after 8s grace releases seat/invite, reconnect with same session before grace resumes. Multiple tabs => only most recently connected tab controls; older socket rejected with reason.
-
-## Anti-harassment
-Block/report/mute required BEFORE public chat launch. Server enforces blocked pair isolation for chat, invites, friend requests, DM and join-friend. Report options Quấy rối/Spam/Giả mạo/Ngôn từ thù ghét/Khác. Data minimization, small staff review queue and ban escalation. No player-created rooms/links or uploaded images in MVP. Adult target 18+ self-attestation (not foolproof identity proof), and moderation ready before production.
-
-## Test flows
-Two browser contexts: enter, see each other, wave, chat in courtyard, try chat in hall (rejected), friend request+accept, DM, invite pair activity, receive same card, depart, rejoin friend; test decline/block/timeout/duplicate/room full. NPC cannot satisfy multiplayer acceptance. Verify message not delivered beyond 16m or to a blocked account. Verify no fake counter.
+## Acceptance
+Two genuine Spawn player sessions, not mocked NPCs: nearby 16m vs beyond; quiet hall; block suppresses messages/invites; mutual friend accepts/rejects; duo accept/decline/leave/disconnect; 5-min opt-in expiry; no global side effect without confirmation. Verify API contracts with actual code, permission constraints and tests before marking DONE.

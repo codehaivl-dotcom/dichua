@@ -1,8 +1,8 @@
 > **OWNER ART UPDATE 2026-11-01:** All visitors/NPCs in every pagoda scene must wear **modest, formal, temple-appropriate clothing**. The previously generated Chùa Sen reference image's mini skirt is **NOT approved**. See [dress code](docs/15-WARDROBE-DRESS-CODE.md) and [10 gameplay concepts](docs/16-CONCEPT-ART-BOARD.md).
 
-# Đi Chùa Online — FULL SPEC V3 (2026-11-01)
+# Đi Chùa Online – Cầu An · Duyên Lành — SPAWN GAME SPEC V4 (2026-11-02)
 
-**Status: specification committed; game code not implemented yet.**
+**Status: specifications and content in this repo; actual Spawn runtime implementation NOT verified here.** Spawn supplies identity/social/network/rendering; do not rebuild these.
 
 A 3D third-person Vietnamese multiplayer **social game** combining the online-temple trend with **Phố Có Hẹn** social interaction: meeting players, proximity chat, friends, DMs, co-op experiences, tea, photos, fortune-telling and folklore activities. **Not Làng Xíu Xiu; no mandatory low-poly.** Use textured, natural-scale 3D style based on the user's 01/11/2026 third-person screenshot (quality/camera reference only, not Western street setting).
 
@@ -29,3 +29,6 @@ Exact config/data: [temple practices](data/temple-practices.v3.json), [sutra cat
 - [Mini-game gieo quẻ lạ / quẻ hiếm / global tùy chọn / bạn cùng tần số](docs/17-QUE-LA-DUYEN-TINH-CO.md)
 - [32 lời quẻ hài, 8 sao giả tưởng, 9 lời quẻ đôi](data/folk-fun.v1.json)
 - Chỉ có spec + data; chưa code hoặc xác minh API Spawn cho global/nearby.
+
+### V4 audit corrections (2026-11-02)
+Old quẻ vs folk fun activities now use separate anchors/pools; 6 short optional minigames in folk-fun data; opt-in symbol selected once; original 8 stars retained. See [docs/17](docs/17-QUE-LA-DUYEN-TINH-CO.md), [Spawn architecture](docs/06-TECH.md), and [updated delivery](docs/09-DELIVERY.md). API existence and runtime gameplay remain UNVERIFIED.

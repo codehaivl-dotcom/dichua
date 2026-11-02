@@ -1,8 +1,11 @@
 {
   "schemaVersion": 1,
   "orderedInteractionPriority": [
+    "folkFunPair",
     "pairOracle",
+    "folkFunSolo",
     "soloOracle",
+    "folkFunStars",
     "cutTies",
     "starOffering",
     "incense",
@@ -147,6 +150,72 @@
       "id": "wave",
       "clipMs": 1100,
       "cooldownMs": 2000
+    },
+    {
+      "id": "folkFunSolo",
+      "anchorId": "FUN_ORACLE_SOLO",
+      "zone": "Z_FOLK",
+      "maxRange": 1.8,
+      "serverSelectPool": "folk-fun.v1.json:cards",
+      "cooldownAfterRevealMs": 60000,
+      "randomMethod": "weightedTierThenUniformCard",
+      "pairRequired": false,
+      "phases": [
+        "IDLE",
+        "DRAWING",
+        "REVEAL",
+        "PRIVATE_RESULT",
+        "OPTIONAL_MICRO",
+        "FINISH"
+      ],
+      "durationEstimateSec": [
+        10,
+        70
+      ],
+      "idempotencyScope": "spawnPlayerId + commandId"
+    },
+    {
+      "id": "folkFunPair",
+      "anchorId": "FUN_ORACLE_PAIR",
+      "zone": "Z_FOLK",
+      "maxRange": 2,
+      "partnerDistanceMax": 3,
+      "timeoutInviteMs": 30000,
+      "maxDistanceAfterStart": 8,
+      "cooldownAfterRevealMs": 60000,
+      "serverSelectPool": "folk-fun.v1.json:pairOutcomes",
+      "pairRequired": true,
+      "selectionMode": "USE_PRESELECTED_OPT_IN_ICON_ONCE",
+      "phases": [
+        "DISCOVER_OPT_IN",
+        "PRIVATE_SUGGESTION",
+        "INVITE",
+        "ACCEPT",
+        "READY_AT_PADS",
+        "RESULT",
+        "FINISH"
+      ],
+      "durationEstimateSec": [
+        30,
+        90
+      ]
+    },
+    {
+      "id": "folkFunStars",
+      "anchorId": "STAR_PAVILION",
+      "zone": "Z_FOLK",
+      "maxRange": 1.8,
+      "serverSelectPool": "folk-fun.v1.json:stars",
+      "sharesExistingMechanic": "starOffering",
+      "starSocketCount": 8,
+      "mode": "OPTIONAL_FICTIONAL_SKIN",
+      "idempotencyScope": "spawnPlayerId + commandId",
+      "phases": [
+        "CHOOSE_FICTION_SKIN",
+        "ALIGN_EXISTING_STAR",
+        "SHOW_FICTIONAL_RESULT"
+      ],
+      "note": "DO NOT CREATE NEW SOCKETS OR REPLACE EXISTING INTENTION CATEGORIES"
     }
   ],
   "social": {
@@ -170,5 +239,6 @@
     "roomMaxAfterValidation": 50,
     "reconnectGraceMs": 8000,
     "idempotencyCacheMs": 120000
-  }
+  },
+  "spawnRuntime": "SPAWN_OWNS_SOCIAL_AND_NETWORK"
 }

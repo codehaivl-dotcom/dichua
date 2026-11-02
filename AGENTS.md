@@ -1,21 +1,19 @@
-> **NEW MANDATORY RULE:** All player avatars and background NPCs wear modest, appropriate temple attire across every concept/level. No miniskirts, shorts, exposed shoulders, low-cut or sheer clothing. The previously generated 2026-11-01 image has a main character in a short skirt: camera/world fidelity reference ONLY, outfit REJECTED. See docs/15 and data/avatar-wardrobe.v1.json. Apparel failure = art QA fail; don't claim "approved" from image. All future 10 concepts apply this standard.
+# AGENTS — Đi Chùa Online: Cầu An · Duyên Lành (OWNER V4 2026-11-02)
 
-# AGENTS.md — LOCKED V3 (OWNER 2026-11-01)
+**LATEST OWNER OVERRIDE / NON-NEGOTIABLE:** This repository is the **game content/spec** for Spawn. Spawn already provides avatar engine/rendering, account/display names, join/party/network, chat/DM/friends/block/report, basic menus and loading. **NEVER** rebuild TS/Fastify/ws/Postgres/auth/cookie/Khách xxxx/standalone graphics or a duplicate 18+ game gate because some old paragraph said so. Spawn API details NOT in this repo are UNKNOWN until inspected. If a capability needed for private match or global notifications is missing, mark PENDING_SPAWN_API and do not fake it. Docs/03,06,07,09,14 and docs/17 are current authoritative implementation contracts; earlier conflicting passages are historical.
 
-**OVERRIDE:** Any older doc saying “no 108, no counting, no sutra, no levels, no multi-chùa” is out of date. Owner approved **all** of these features. Latest owner decision > docs/00 > docs/10–14 expansion > docs/01–09 original baseline > implementation. If an exact enum/timing lives in a data/*.json file, match it; flag discrepancies as DECISION_REQUIRED.
+## Product identity
+- Game title: **Đi Chùa Online – Cầu An · Duyên Lành**. Core is going to a Vietnamese pagoda, respectful worship/meditation, real scripture, scenery, community; NOT a dating-only or idle clicker. Spawn social features supplement it.
+- All three places: Chùa Sen, Trúc, Mây. Warm detailed 3D stylized Vietnamese architecture, natural scale, no forced low-poly or Chinese/Japanese palace. Avatar clothing modest, respectful; docs/15 and data/avatar-wardrobe.v1.json.
+- Temple systems T01–T10 remain mandatory scope, real sutra bibliography and cleared audio gate in docs/11–13, no fake Play. Folklore/love/star/cut ties go in physically separate areas (not main hall). Never claim superstition changes real fate or fabricate Buddhist scripture.
 
-1. Game = “đi chùa online” x Phố Có Hẹn: third-person social 3D with **real** friends, chat, pair activities and meaningful rituals. Not Làng Xíu Xiu, no forced low-poly, no idle temple-only clone.
-2. Deliver all previously documented folklore/social plus T01–T10 (see docs/10), five authentic sutra catalog entries (docs/11), three true playable maps, event calendar, optional game-only XP/level/board (docs/12).
-3. Never fake another player, fake group activity, fake multiplayer, fake scripture or fake audio buttons. A demo screenshot is NOT a feature. Only real browser runtime and server traces qualify.
-4. **Audio/text rights gate:** ancient scripture vs modern Vietnamese translation vs voice recording are separately licensed. Official listening website link is okay as an external link; rehosting MP3 without permissions is forbidden. At least 2 cleared Vietnamese audio tracks actually playing in game for FULL V3.
-5. **Spirituality:** dâng sao giải hạn, cắt duyên âm, xăm and love oracle are clearly game/folk fantasy, not canonical Buddhist rites or guaranteed fate changing. Never invent Buddha quote. No fees for merits, blessings, cures, predictions or removing supposed spirits.
-6. **Progression:** game-only discovery/cooperation points; no XP per prayer/bead/bow/chant/monetary donation; opt-in anonymous board only among mutual friends; no rank pressure.
-7. **Social safety:** chat/DM requires block/report/mute and server enforcement; duo activities require explicit consent; personal wish text private by default and only moderated/approved public sharing. 18+ adult target and GDPR review, no birthdates or identity data requested by rituals.
-8. Code first: TypeScript strict, server authoritative movement/counts/occupancy/card IDs, shared Zod schemas, tests and CI; mobile touch + desktop. Build Phase0/1 genuine playable slice before large content polish; then Phases 2–8 in docs/14, do not abandon remaining approved scope.
-9. Every PR report: IMPLEMENTED / TESTED (commands, trace, runtime video URL) / FAILED / UNVERIFIED / BLOCKED / NEXT. Zero claim of done without working browser test.
-10. No secret, unlicensed asset, paid third-party API or recurring service without owner consent. Don't endlessly rewrite docs instead of coding.
+## Game-only activities
+- Legacy `soloOracle` (12 loveSolo cards at ORACLE_SOLO), `pairOracle` (12 pairLove at ORACLE_PAIR), `starOffering` (exactly **8 sockets**) must not collide with NEW `folkFunSolo` (32 cards at FUN_ORACLE_SOLO), `folkFunPair` (9 outcomes at FUN_ORACLE_PAIR), and optional `folkFunStars` 8-socket skin using same star system. Exact config in data/activities.v1.json, data/zones.v1.json, data/folk-fun.v1.json, docs/17.
+- Rare Global sharing = explicit opt-in preview, no other players' names, caps 1/user/day and 1/server/5 minutes if verified by Spawn. Nearby 0–3 opt-in real players only within 16m, same room and block-aware; choose symbol SEN/CHUONG/TRA once at opt-in (5m) and reuse in duo result. Never fake users.
+- Six authored short optional micro-games with exact input/win/fail in folk-fun.v1.json; one may trigger after particular cards, never required to read/store a quẻ or participate in temple practices.
 
-**Agent's immediate task:** implement Phase 0–1 runnable, documented by docs/14-V3-IMPLEMENTATION.md, then two-browser social; keep full V3 milestones as required scope.
-
-## Owner add-on, 2026-11-02
-Read docs/17-QUE-LA-DUYEN-TINH-CO.md and data/folk-fun.v1.json for the comedic folk mini-game extension. Reuse Spawn socials. Only opt-in rare announcements and opt-in nearby pair suggestions, not unconsented names or forced pairings. No gambling or comedy in the Buddhist main hall; no fake 'kinh'. All features remain UNIMPLEMENTED until tested inside Spawn.
+## Safety and production rules
+- Private wishes by default, moderated public templates only. Quẻ fun is game-authored fiction, **not** Buddhist canon or actual fate prediction. No paid rerolls/merit/purification, no rank pressure for chanting/bows. No explicit 18+ signup gate added to game; inherit Spawn youth safeguards, disable risky features if not verifiable.
+- Only real Spawn world run counts as IMPLEMENTED. QA requires real player interactions, mic/camera permissions as appropriate, API traces, phone/desktop, 30-player performance and failure cases; docs/data validation is NOT runnable gameplay.
+- License authentic sutra translation vs recorded audio separately; 2 cleared VN audio tracks must really play for full-release acceptance.
+- Do NOT just audit endlessly. Build playable Spawn Chùa Sen first, then improve via docs/09,14 phases. Report IMPLEMENTED / TESTED / FAILED / UNVERIFIED / PENDING_SPAWN_API / NEXT, with actual evidence.

@@ -1,21 +1,18 @@
-# 14 — V3 Implementation order and full delivery gates
+# 14 — Accepted implementation order (Spawn override, 2026-11-02)
 
-All phases are REQUIRED for full V3; can deliver alpha in earlier phases.
+**This supersedes prior TS/Fastify/PostgreSQL stand-alone instructions.** Spawn already handles renderer, login, display names, avatars/network, chat/DM/friends/block/report, room party, menu and loading. Implement only game-side assets/activities. For full feature scope see docs/00, 10–13; module docs/17.
 
-0. TS strict pnpm monorepo Vite + Three.js, Fastify/ws, Zod, DB migrations, CI, Vitest/Playwright; one command boots real scene and authoritative server.
-1. Real 3D playable vertical slice: avatar, textured temporary gate/courtyard/hall, camera/collision, desktop and mobile controls, NPC, actual solo-oracle server state; enter->play->leave->reenter.
-2. Two-browser genuine multiplayer, 30-per-room target, chat/friend request/accept/DM/block/report, tea/photo social, reconnect and server authority.
-3. Existing four folklore mini-games: solo/pair love oracle, symbolic star, fictional cut-ties, actual animation+privacy+consent.
-4. Vietnamese mid-poly textured final art as owner screenshot fidelity (not low-poly mandatory), animation, sound, UI, mobile optimization and performance.
-5. Security, abuse moderation, GDPR/privacy, license registry, production staging and 30-client load tests.
-6. **NEW mandatory practices:** mala then 108 bows FIRST, then gõ mõ/thiền, four offerings, hoa đăng privacy, xăm, cầu an, journal. Implement real schema/data and tests V301/V302/V305–V311.
-7. **REAL sutras:** 5 source cards and external official listening (can ship early). Secure rights or create original licensed 2-track Vietnamese scripture audio; ship in-game player only when actual audio file and rights receipt verified, V303/V304/V316. If blocked report plainly and continue unrelated coding.
-8. **Multi-map/social calendar:** CHUA_TRUC/CHUA_MAY, cross-map room transition, 4 opt-in scheduled events, six cosmetic game levels and optional friends-only leaderboard, tests V312–V315.
+1. Confirm existing Spawn player/zone/scene lifecycle APIs with actual code evidence, no invented methods. Build a playable Chùa Sen visit with gate, hall, camera, collision and one usable ritual.
+2. Hook existing Spawn identity/social/quiet zone and test real 2-account presence, 16m proximity, block/report and invites.
+3. Build authentic in-game practice with mala, 9/27/108 bows, incense, bell, wooden fish, meditation, tea, hoa đăng and xăm with correct visuals/state. Keep fiction separated from scripture.
+4. Implement older `soloOracle`/`pairOracle` (12/12 cards) and `starOffering` (8 sockets), `cutTies` per docs/01 and 10.
+5. Implement new `folkFunSolo` and `folkFunPair` using new anchors in data/zones.v1.json and 32/9 source pools in data/folk-fun.v1.json; 6 short optional micro-games. `folkFunStars` is a selectable 8-socket comedy skin, not an extra set of stars.
+6. Verify Spawn's privacy-safe nearby opt-in matching and Global announcement APIs. If available, launch consented matching and explicit rare Global sharing with caps/quiet-zone suppression. If unverified or missing, keep disabled, not faked.
+7. Three genuinely playable places Chùa Sen/Trúc/Mây, events at VN schedule, opt-in cosmetic progression, rights-safe scripture listening and two cleared Vietnamese playable tracks for FULL release.
+8. Optimize architecture, outfits and assets, 30-person performance, runtime safety/privacy audit and phone/desktop E2E. Every PR deliver actual playable Spawn evidence; not just JSON, docs or concept images.
 
-Developer simulator required: 108 counter packet duplication & pause; bow callback duplication; timed bell/audio player; 40 lamps; annual event timezone; 30 WS clients across maps; server points receipt idempotency. Every phase PR must show runtime video/screens, command outputs, performance numbers and blockers.
+## Mandatory art review
+Follow docs/15: formal modest pagoda attire for all players/NPC; no miniskirts/short shorts/revealing shoulders; avatar clothing should not clip during bows/sits. Docs/16 concept images are references, not finished game screenshots. Reflected 3D from gameplay must match user-selected warm, detailed Vietnamese stylized style.
 
-**First action for coding agent:** build phase 0/1 runnable before more planning or asset sheets. No feature may be marked done only from this spec.
-
-
-## Locked new art-review gate · 2026-11-01
-Implement [docs/15](15-WARDROBE-DRESS-CODE.md) four temple-appropriate wardrobe presets and audit NPC/crowd clothes BEFORE claiming Phase 4 art ready. Record DRESS-01..DRESS-06 passes with actual render/rig walk, lạy 108, sit, tràng hạt, tea. Follow the **10-scene concept board** docs/16; the one ChatGPT Chùa Sen concept is camera/environment reference only and its short skirt is rejected. Do not say 10 images exist in repo until actual image files are committed.
+## Blocking API evidence
+For every new engine-dependent action, record: source API signature, observed runtime behavior, one real successful case, one denial/failure case, and fallback. No independent database, login, Fastify/ws/Three.js recreation.

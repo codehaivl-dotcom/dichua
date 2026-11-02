@@ -1,40 +1,36 @@
-> **OWNER V3 EXPANSION (2026-11-01):** New required features supersede any conflicting older MVP exclusion. See docs/10–14 and AGENTS.md. Sections below are retained as baseline for initial social/folklore phase, not the entire full-game scope.
+# 06 — Spawn-native architecture and capability verification (OWNER V4, 2026-11-02)
 
-# 06 — Technical architecture, protocol, persistence and failure modes
+> **Owner decision:** Build the game *inside Spawn's existing world/player platform*. The old stand-alone recipe "Vite/Three.js + Fastify/ws + PostgreSQL + guest cookies" is canceled for this game. Do NOT scaffold auth, network, WS server, chat, friends, DM, report, graphics menu/loading, or an alternative 3D renderer. If a required capability is missing, report `PENDING_SPAWN_API`; owner must decide alternative before adding infrastructure.
 
-## Recommended stack
-Monorepo TypeScript strict / pnpm / Vite / Three.js (GLB, KTX2), small accessible DOM UI; Node.js 22 + Fastify + ws (WebSocket); Zod shared runtime schemas; PostgreSQL production + SQLite dev adapter if tested equivalent; Vitest + Playwright E2E + scripted WS load. Use existing compatible Player Platform from Phố Có Hẹn only if available, permitted and adapter tests demonstrate same runtime/source works on both MangoLocal and Spawn Live. No imaginary dependency. If not available, build standalone functional backend in this repo and document compatibility boundary.
+## Runtime responsibilities
+**Spawn owns:** player identity/display name, account state, avatar controller/camera, rendering engine, place lifecycle, networking/presence, room/party, chat, friend/DM, block/report/mute, default UI/loading/menu and platform persistence as available.
 
-Suggested paths: apps/client/src/{scene,camera,avatar,controls,ui,activities,social,network,audio}; apps/server/src/{auth,rooms,simulation,actions,friends,chat,persistence,moderation}; packages/shared/src/{protocol,schemas,content,types}; data/*.json; tests/{unit,e2e,load}; scripts/profile; .github/workflows/ci.yml.
+**Game owns:** Chùa Sen / Trúc / Mây place scenes, 3D models/colliders, outfit assets, NPC/dialogue, interaction hooks, immersive animations, game-only activity state, curated quẻ data, selection rules, localized UI overlays, journal / progression if supported, audio assets, privacy preferences and quality gates.
 
-## Network
-20 Hz authoritative server, client input <=20 Hz seq+normalized input (not client world coordinates), 10 Hz snapshots of nearby avatars + global activity state. AOI 35m +8m hysteresis. Server clamps speed/collision/active action, seat claims and same-user dual-tab control; client interpolates remote 120ms and reconciles own movement. Connection after transient failure backoff .5/1/2/4/8s with jitter max 5, grace 8s, release leased seats and pending invites. Persistent friend data survives world server restart; active instances don't. No fake local player objects presented as real online in disconnected mode.
+**Do not assume exact Spawn method names.** Before coding each dependent feature, find the actual engine API and record its signature/source file, observed behavior and permission contract. Do not silently duplicate platform features. No invented endpoints.
 
-## Protocol v1
-C->S HELLO {version,build}; JOIN {avatarPreset}; INPUT {seq,axes:[x,z],yawDelta,fastWalk}; INTERACT {commandId,actionId,targetId,choice?}; SOCIAL {commandId,op,targetGuestId,payload?}; CHAT {commandId,channel,recipientId?,text}; LEAVE; PING.
-S->C WELCOME {guest,roomId,serverTick}; ROOM_STATE {players,seatState,starState,roomCount}; SNAPSHOT {tick,ackSeq,entities}; ACTION_RESULT {commandId,accepted,code,payload?}; SOCIAL_EVENT; CHAT_EVENT; ERROR {code}; PONG.
-Each message contains discriminator + schemaVersion=1. Shared Zod runtime parse server and client. Max chat length by grapheme; max WS frame <=128KiB, normal command <=8KiB, snapshot <=64KiB. Rate limits input 30/s, actions 6/s, friend req 3/min and 10/day, nearby chat 10/min, DM 20/min. dedup (guestId,commandId) 2 min. Never accept client-provided random fortuneId.
+## Spawn capability checklist (UNKNOWN until demonstrated)
+| Capability | Required by | Fallback if unsupported |
+|---|---|---|
+| Authoritative game action/state & replay-safe receipt `(SpawnPlayerId, commandId)` | Weighted quẻ, awards, draw cooldown | Block verified draw/Global until server authority mechanism approved |
+| Player position/zone, privacy-safe opt-in nearby search, block state | Folk pair suggestions within 16m | Disable suggestion, allow manually invited mutual friends only if safe |
+| Invitation + accept/decline/block | Quẻ đôi, tea co-op | Disable duo activity rather than fake consent |
+| Whole-server announcement + rate-limit control | Rare quẻ Global | Existing room/friend share, if supported; otherwise private only |
+| Per-player UI suppression by `Z_HALL` | Quiet worship area | Prevent global folk joke banner during hall occupancy; review before publish |
+| Persist private user game data + deletion/export | Journal, quẻ history, XP, opt-in | Offer session-only mode with clearly stated limitations |
+| 3-place portal/party travel and camera/photo | Pilgrimage/social photos | Mark API dependent, do not create another login/room system |
+| Local audio rights-safe player | Sutra, bell, ambience | External official listening link until cleared local audio available |
 
-## Canonical server state
-Room: roomId, joinedPlayerIds, chatZone, seats (free/reserved/occupied), activeStars (8 sockets + expireAt), pairSessions, photoInvites, tea tables, tick.
-Player: guestId, publicAlias, avatarPreset, pos/yaw/motion, currentZone, activityState, action cooldowns, connected, lastSeq, privacyPrefs.
-Friend: guestA,guestB,status,requesterId,createdAt,expiresAt,updatedAt.
-Message: id,sender,recipient,text,createdAt,expiresAt(30d),reportRef? — mutual only.
-Journal: guestId, resultCardId, activity, createdAt — last 20 (private).
-Report: id,reporter,target,category,serverEventRefs,createdAt,reviewStatus. IP/security logging minimal separate with retention according to policy.
+## Data/interaction contract (logical, not invented network endpoints)
+- Spawn game activity IDs: `soloOracle`, `pairOracle`, `starOffering`, `cutTies`, `folkFunSolo`, `folkFunPair`, `folkFunStars`.
+- 7 required anchor IDs for oracles/folk fun are in `data/zones.v1.json`; don't transplant coordinates without checking 3D world.
+- `data/activities.v1.json` specifies source pools & phases. All `commandId` draws must be idempotent; no client-provided rarities or action-completed claims.
+- `folkFunStars` shares exactly **8** star sockets with `starOffering`, as an optional content skin. 4 original star intentions remain unchanged.
+- The two folk quẻ pairs are separate: 12 older `pairLove` outputs and 9 NEW `pairOutcomes`. Both require consent and can be declined.
+- No personally identifying or faith-related data used for outcomes; folk-fun symbol matching only among opted-in players, no age/gender/birth date matching.
 
-## Atomic operations
-Friend request uniqueness per sorted pair, accept only recipient; block overrides request/invite/message. Pair session exactly two participants with both ACCEPT and READY, one server random card, same result for both, exactly-once journal write per player. Seat reservation first valid server arrival wins; disconnect grace expiry frees seat. Stars choose first free socket 45s, slot full doesn't block private completion.
+## Tests needed before calling it built
+One real Spawn place boot → real avatar movement/collision; one real activity → authoritative result and restart/retry; two independent real user sessions → both see same duo result, decline/block; 30 clients for map/performance if Spawn supports stress tools. Capture actual console/network/engine trace, screenshots/video and FPS; do not label docs/data-only state as implemented.
 
-## Database and HTTP
-HTTP GET /healthz,/readyz,/api/config,/api/privacy; POST /api/guest (create or recover cookie); POST /api/delete-guest (delete identity, friendships/messages according to policy); GET /api/me (same-origin auth); WebSocket /ws. HTTP mutating endpoints require CSRF protection (Origin/CSRF token), WebSocket checks Origin. No password in MVP. DB migrations transactional; test delete/rejoin and retention cleanup. Never store raw third-party personal data from ritual fields (there are none).
-
-## Performance
-Budget targets from doc 02, lazy GLB loading + instancing, render loop independent of network tick, remote avatar LOD, quality presets, throttled hidden tab, dispose GPU resources/listeners on leave and rejoin. Measure FPS/render calls/GPU memory/WS bytes, not just unit tests.
-
-## Deployment
-Static frontend CDN plus Node API/ws behind same-origin HTTPS proxy; staging and production env, server metrics health probes, secure cookies, DB backups, automated DB migrations, ws upgrade configured. Secrets env only; logs redact chat text and identifiers where possible. Do not claim prod-ready without deployment and live two-client test.
-
-
-### V3 runtime/authority
-Room key includes mapId, instanceId; 3 map scene transfer must be transactional with rollback and same identity/friends. Add practice controllers server-validated for mala 18/54/108, bow 1/9/27/108, lanterns cap40, four offering cooldowns, 12 xăm slip server draw, private wishes, event scheduler Asia/Ho_Chi_Minh, XP idempotent receipts and optional friend ranking. Loaded sutra audio assets must be legally cleared and SHA256 indexed; external official recordings are linked, not illegally proxied. Shared schemas for new data/*.json; load 30 clients per room and test map travel/reconnect.
+## Blocker statuses
+`AVAILABLE` = concrete API + observed test. `UNAVAILABLE` = explored and definitively missing. `UNKNOWN/PENDING_SPAWN_API` = not checked. Build only game-side features that have a working dependency. Native Spawn capabilities may be present but remain unverified in this repo until evidence supplied.

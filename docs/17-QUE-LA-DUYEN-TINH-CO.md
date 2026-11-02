@@ -7,7 +7,7 @@
 The game should have the weird, curious, hilarious, highly shareable surprises that other online temple games lack. The Vietnamese flavor is gentle irreverence about everyday life (ông Tơ lạc GPS, thả thính, deadline, trà, tìm dép...), **never ridicule actual Buddhism or participants**. Fictional folk-divination / fun activity lives in Z_LOVE or Z_FOLK. The authentic central hall Z_HALL stays solemn.
 
 ## Mini-game A: Gieo Quẻ Lạ (32 authored cards)
-At the existing ORACLE_SOLO anchor, player chooses 1 of 3 envelopes, spins/shakes for 2.2 seconds; game authority selects tier with explicit weights **THUONG 72%, VUI 22%, HIEM 5%, HUYEN_THOAI 1%** and then a card uniformly within tier. Display title, funny prophecy, friendly conversation/quest prompt. Save privately or optionally share; no auto-share, no money, no paid rerolls, no prediction based on personal data. A nice/rare card is a game rarity only, not spiritual privilege. 60-second cooldown; idempotent result from commandId. Data: folk-fun.v1.json.
+At the NEW FUN_ORACLE_SOLO anchor in Z_FOLK, player chooses 1 of 3 envelopes, spins/shakes for 2.2 seconds; game authority selects tier with explicit weights **THUONG 72%, VUI 22%, HIEM 5%, HUYEN_THOAI 1%** and then a card uniformly within tier. Display title, funny prophecy, friendly conversation/quest prompt. Save privately or optionally share; no auto-share, no money, no paid rerolls, no prediction based on personal data. A nice/rare card is a game rarity only, not spiritual privilege. 60-second cooldown; idempotent result from commandId. Data: folk-fun.v1.json.
 
 Example rare: “Duyên Đi Đường Vòng”: “Ông Tơ không đi lạc, chỉ đang tìm chỗ gửi xe.”
 Example legendary: “Đào Hoa Nở Muộn”: “Duyên chưa tới không phải do ế; GPS của ông Tơ đang cập nhật bản đồ.”
@@ -20,7 +20,7 @@ In/near Z_HALL no popups, loud joke audio or spam; if Spawn cannot suppress by z
 ## Mini-game C: Quẻ Hợp Tần Số (opt-in nearby suggestion)
 After drawing, player can choose “Tìm người cùng tần số”. Each voluntarily picks SEN / CHUONG / TRA, and explicitly opts into candidacy for **5 minutes** (OFF default, can stop immediately). Only genuine other players **within 16m, same active Spawn room/place, eligible & also opted in, not blocked, not AFK or occupied in another ritual, not in Z_HALL** may appear as **up to 3 PRIVATE suggestions**. Prefer matching symbol; otherwise use game-only random tie-break. DO NOT calculate from real gender, age, nickname, avatar, birthday, chat, religion or any private data.
 
-A can invite B using existing Spawn invites. B sees A's identity and **Accept / Decline / Block**; reject/timeout within 30s ends the attempt. When both consent and stand at existing ORACLE_PAIR two pads, each independently chooses 1 of 3 symbols; shared result uses **exactly 9 prewritten 3×3 pair outcome texts** from data. Results are playful compatibility *between chosen symbols*, NOT objective fate or relationship judgement. Optional photo only after both agree. Friend request runs through Spawn and needs consent. No publicly announcing “A hợp B” unless both themselves opt to share privately using existing social.
+A can invite B using existing Spawn invites. B sees A's identity and **Accept / Decline / Block**; reject/timeout within 30s ends the attempt. When both consent and stand at NEW FUN_ORACLE_PAIR two pads, the existing SEN/CHUONG/TRA symbols selected ONCE at opt-in are reused; shared result uses **exactly 9 prewritten 3×3 pair outcome texts** from data. Results are playful compatibility *between chosen symbols*, NOT objective fate or relationship judgement. Optional photo only after both agree. Friend request runs through Spawn and needs consent. No publicly announcing “A hợp B” unless both themselves opt to share privately using existing social.
 
 If zero candidates: “Ông Tơ đang kiểm tra sóng Wi-Fi; chưa có ai bật thử quẻ quanh đây.” No fake NPC/bots. Restrict invitations <=3/min; block/mute override. Don't persist match predictions or candidate rosters.
 
@@ -33,7 +33,7 @@ Wooden paper-fortune wheel or draw box; 3 appealing envelope meshes; 4 rarity re
 ## Spawn integration and fallback
 - Spawn is owner of auth/display name, rooms, friends, party, block/report/mute, message delivery, moderation. Do not implement duplicate systems or anonymous “Khách xxxx”.
 - Check whether Spawn offers: (1) server-authoritative RNG/game state, (2) opt-in player-nearby query with block status, (3) inviter/consent flow, (4) global announcements with rate limits and hall suppression. Unknown APIs => **PENDING_SPAWN_API**, not DONE.
-- Compatible anchors: ORACLE_SOLO, ORACLE_PAIR, STAR_PAVILION, zones Z_LOVE/Z_FOLK. Agent must map to actual built world anchors, not blindly assume legacy coords are still correct.
+- Compatible NEW anchors: FUN_ORACLE_SOLO and FUN_ORACLE_PAIR (Z_FOLK); STAR_PAVILION remains shared; old ORACLE_SOLO/ORACLE_PAIR keep their legacy pools. Agent must map to actual built world anchors, not blindly assume legacy coords are still correct.
 - Preserve 16m chat radius, 30-player initial room cap, game context ratings/safety inherited from Spawn. If any Spawn-age protections restrict romantic interactions, obey them; no separate 18+ gate here.
 
 ## Ethics and cultural rule
